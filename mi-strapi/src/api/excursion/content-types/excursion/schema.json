@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "excursiones",
+  "info": {
+    "singularName": "excursion",
+    "pluralName": "excursiones",
+    "displayName": "Excursion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "blocks"
+    },
+    "Activo": {
+      "type": "boolean"
+    },
+    "ImagenPrincipal": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Imagenes": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Precio": {
+      "type": "integer"
+    },
+    "ciudades": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ciudad.ciudad",
+      "mappedBy": "excursion"
+    },
+    "Duracion": {
+      "type": "string"
+    },
+    "Idioma": {
+      "type": "enumeration",
+      "enum": [
+        "Español",
+        "Inglés",
+        "Portugués",
+        "Francés",
+        "Italiano",
+        "Chino"
+      ]
+    },
+    "Accesibilidad": {
+      "type": "boolean"
+    },
+    "Mascotas": {
+      "type": "boolean"
+    }
+  }
+}

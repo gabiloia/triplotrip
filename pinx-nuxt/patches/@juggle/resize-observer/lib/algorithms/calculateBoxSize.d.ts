@@ -1,0 +1,17 @@
+import type { DOMRectReadOnly } from "../DOMRectReadOnly"
+import type { ResizeObserverBoxOptions } from "../ResizeObserverBoxOptions"
+import type { ResizeObserverSize } from "../ResizeObserverSize"
+
+interface ResizeObserverSizeCollection {
+	devicePixelContentBoxSize: ResizeObserverSize
+	borderBoxSize: ResizeObserverSize
+	contentBoxSize: ResizeObserverSize
+	contentRect: DOMRectReadOnly
+}
+declare const calculateBoxSizes: (target: Element, forceRecalculation?: boolean) => ResizeObserverSizeCollection
+declare const calculateBoxSize: (
+	target: Element,
+	observedBox: ResizeObserverBoxOptions,
+	forceRecalculation?: boolean
+) => ResizeObserverSize
+export { calculateBoxSize, calculateBoxSizes }

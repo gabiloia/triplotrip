@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ciudades",
+  "info": {
+    "singularName": "ciudad",
+    "pluralName": "ciudades",
+    "displayName": "Ciudad",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "excursion": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::excursion.excursion",
+      "inversedBy": "ciudades"
+    }
+  }
+}
