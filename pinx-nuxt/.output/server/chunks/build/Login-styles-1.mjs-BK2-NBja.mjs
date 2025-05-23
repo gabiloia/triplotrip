@@ -1,0 +1,6 @@
+import { a as buildAssetsURL } from '../routes/renderer.mjs';
+
+const Login_vue_vue_type_style_index_0_scoped_321eb3fc_lang = ".page-auth[data-v-321eb3fc],.page-auth .wrapper[data-v-321eb3fc]{min-height:100vh}.page-auth .wrapper .image-box[data-v-321eb3fc]{position:relative}.page-auth .wrapper .image-box[data-v-321eb3fc]:after{background-image:url(" + buildAssetsURL("pattern-onboard.3h4CNwFN.png") + ');background-position:50%;background-size:500px;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.page-auth .wrapper .form-box[data-v-321eb3fc]{padding:50px}.page-auth .wrapper .form-box.centered[data-v-321eb3fc]{flex-basis:100%}.page-auth .wrapper .form-box.centered .form-wrap[data-v-321eb3fc]{background-color:var(--bg-default-color);border-radius:20px;max-width:500px;padding:60px;width:100%;@apply shadow-xl;}@media (max-width:600px){.page-auth .wrapper .form-box.centered[data-v-321eb3fc]{padding:4%}.page-auth .wrapper .form-box.centered .form-wrap[data-v-321eb3fc]{padding:8%}}@media (max-width:800px){.page-auth .wrapper .image-box[data-v-321eb3fc]{display:none}.page-auth .wrapper .form-box[data-v-321eb3fc]{flex-basis:100%}}.page-auth .wrapper .image-box[data-v-321eb3fc]{background-color:var(--623c54b4)}';
+
+export { Login_vue_vue_type_style_index_0_scoped_321eb3fc_lang as L };
+//# sourceMappingURL=Login-styles-1.mjs-BK2-NBja.mjs.map

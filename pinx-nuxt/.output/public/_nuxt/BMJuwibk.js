@@ -1,0 +1,1 @@
+import{d as e,g as o,o as r,w as s,h as a,u as n,db as c,f as _}from"./CKyhG2UO.js";const d=e({__name:"LtrContext",setup(f){return(t,l)=>(r(),o(n(c),{class:"ltr-context",rtl:[]},{default:s(()=>[a(t.$slots,"default",{},void 0,!0)]),_:3}))}}),u=_(d,[["__scopeId","data-v-e0813605"]]);export{u as L};
