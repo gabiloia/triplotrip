@@ -931,7 +931,7 @@ const _routes = [
   {
     name: "Propiedades",
     path: "/propiedades",
-    component: () => import('./Propiedades-BPToI9SN.mjs')
+    component: () => import('./Propiedades-DN21VXSn.mjs')
   },
   {
     name: "Tables-Base",

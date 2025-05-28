@@ -1,0 +1,1 @@
+import{d as e,i as o,a as r,w as s,j as a,u as n,db as _,_ as c}from"./CFnCIwgc.js";const d=e({__name:"LtrContext",setup(l){return(t,p)=>(r(),o(n(_),{class:"ltr-context",rtl:[]},{default:s(()=>[a(t.$slots,"default",{},void 0,!0)]),_:3}))}}),i=c(d,[["__scopeId","data-v-e0813605"]]);export{i as L};
