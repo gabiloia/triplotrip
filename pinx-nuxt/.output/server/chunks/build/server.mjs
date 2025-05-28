@@ -847,114 +847,109 @@ const __nuxt_page_meta = {
 };
 const _routes = [
   {
-    name: "Test",
-    path: "/test",
-    component: () => import('./Test-ChxU_owd.mjs')
-  },
-  {
     name: "Icons",
     path: "/icons",
-    component: () => import('./Icons-34L5lFA8.mjs')
+    component: () => import('./Icons-Dzwdb9Bz.mjs')
   },
   {
     name: "Profile",
     path: "/profile",
     meta: __nuxt_page_meta$j || {},
-    component: () => import('./Profile-BUrooyEa.mjs')
+    component: () => import('./Profile-CgW4CpXQ.mjs')
   },
   {
     name: "Calendar",
     path: "/calendar",
     meta: __nuxt_page_meta$i || {},
     alias: ["/apps", "/apps/calendars"],
-    component: () => import('./Calendar-DoAAnAbQ.mjs')
+    component: () => import('./Calendar-Byr0r8yM.mjs')
   },
   {
     name: "Apps-Chat",
     path: "/apps/chat",
     meta: __nuxt_page_meta$h || {},
-    component: () => import('./Chat-C2m8S7Mr.mjs')
+    component: () => import('./Chat-Cpjpdr39.mjs')
   },
   {
     name: "Apps-Notes",
     path: "/apps/notes",
     meta: __nuxt_page_meta$g || {},
-    component: () => import('./Notes-Cd3icAAy.mjs')
+    component: () => import('./Notes-D61HnOBe.mjs')
   },
   {
     name: "Login",
     path: "/auth/login",
     meta: __nuxt_page_meta$f || {},
     alias: ["/login"],
-    component: () => import('./Login-Dk-8lDYO.mjs')
+    component: () => import('./Login-D7MsjdgC.mjs')
   },
   {
     name: "Cards-List",
     path: "/cards/list",
-    component: () => import('./List-CeK2XLpf.mjs')
+    component: () => import('./List-Dwo5xMPe.mjs')
   },
   {
     name: "Typography",
     path: "/typography",
-    component: () => import('./Typography-B_2UGyTz.mjs')
+    component: () => import('./Typography-Bbk09ri0.mjs')
   },
   {
     name: "Apps-Kanban",
     path: "/apps/kanban",
     meta: __nuxt_page_meta$e || {},
-    component: () => import('./Kanban-Cf9FnolP.mjs')
+    component: () => import('./Kanban-DFmfkld_.mjs')
   },
   {
     name: "Logout",
     path: "/auth/logout",
     meta: __nuxt_page_meta$d || {},
     alias: ["/logout"],
-    component: () => import('./Logout-CZ9Y_OnE.mjs')
+    component: () => import('./Logout-GB6o5DzB.mjs')
   },
   {
     name: "Cards-Basic",
     path: "/cards/basic",
     meta: __nuxt_page_meta$c || {},
     alias: ["/cards"],
-    component: () => import('./Basic-DYddBnLo.mjs')
+    component: () => import('./Basic-DVqZpk22.mjs')
   },
   {
     name: "Cards-Combo",
     path: "/cards/combo",
-    component: () => import('./Combo-YdpILH1A.mjs')
+    component: () => import('./Combo-C9GiczGH.mjs')
   },
   {
     name: "Cards-Extra",
     path: "/cards/extra",
-    component: () => import('./Extra-CHd8NgyN.mjs')
+    component: () => import('./Extra-fd0HPFfV.mjs')
   },
   {
     name: "Propiedades",
     path: "/propiedades",
-    component: () => import('./Propiedades-BPToI9SN.mjs')
+    component: () => import('./Propiedades-Di48tN9h.mjs')
   },
   {
     name: "Tables-Base",
     path: "/tables/base",
     meta: __nuxt_page_meta$b || {},
     alias: ["/tables"],
-    component: () => import('./Base-Czm4yPs6.mjs')
+    component: () => import('./Base-8VCWRWOD.mjs')
   },
   {
     name: "Tables-Grid",
     path: "/tables/grid",
-    component: () => import('./Grid-Cgb2LjTE.mjs')
+    component: () => import('./Grid-DUx2m8qA.mjs')
   },
   {
     name: "Apps-Mailbox",
     path: "/apps/mailbox",
     meta: __nuxt_page_meta$a || {},
-    component: () => import('./Mailbox-Bvw_osL_.mjs')
+    component: () => import('./Mailbox-2zDoXFFt.mjs')
   },
   {
     name: "Maps-Leaflet",
     path: "/maps/leaflet",
-    component: () => import('./Leaflet-Js5GjOB8.mjs')
+    component: () => import('./Leaflet-2gRBFQoz.mjs')
   },
   {
     name: "Toolbox-Tour",
@@ -966,366 +961,366 @@ const _routes = [
     path: "/auth/register",
     meta: __nuxt_page_meta$9 || {},
     alias: ["/register"],
-    component: () => import('./Register-CtUBMgEq.mjs')
+    component: () => import('./Register-BcxwgCgI.mjs')
   },
   {
     name: "Editors-Quill",
     path: "/editors/quill",
     meta: __nuxt_page_meta$8 || {},
     alias: ["/editors"],
-    component: () => import('./Quill-DH1x2R5S.mjs')
+    component: () => import('./Quill-Hlgoib8R.mjs')
   },
   {
     name: "Maps-MapLibre",
     path: "/maps/maplibre",
-    component: () => import('./MapLibre-Br6j9lva.mjs')
+    component: () => import('./MapLibre-DSJ7yfxC.mjs')
   },
   {
     name: "MultiLanguage",
     path: "/multilanguage",
-    component: () => import('./MultiLanguage-1ZYwD_YL.mjs')
+    component: () => import('./MultiLanguage-C1s90Ap1.mjs')
   },
   {
     name: "Charts-ChartJS",
     path: "/charts/chartjs",
-    component: () => import('./ChartJS-C7aGHCHy.mjs')
+    component: () => import('./ChartJS-BY0e0_Hy.mjs')
   },
   {
     name: "Components-Tag",
     path: "/components/tag",
-    component: () => import('./Tag-CfezsM3U.mjs')
+    component: () => import('./Tag-D2WLkoXK.mjs')
   },
   {
     name: "Editors-Tiptap",
     path: "/editors/tiptap",
-    component: () => import('./Tiptap-BbanL7iB.mjs')
+    component: () => import('./Tiptap-CDussa22.mjs')
   },
   {
     name: "Maps-VectorMap",
     path: "/maps/vectormap",
-    component: () => import('./VectorMap-2mLIG5ne.mjs')
+    component: () => import('./VectorMap-CM244wbb.mjs')
   },
   {
     name: "Cards-Ecommerce",
     path: "/cards/ecommerce",
-    component: () => import('./Ecommerce-DXSITVSA.mjs')
+    component: () => import('./Ecommerce-BuOLEl-5.mjs')
   },
   {
     name: "Components-Card",
     path: "/components/card",
-    component: () => import('./Card-BtFws-Af.mjs')
+    component: () => import('./Card-BlBHOpTt.mjs')
   },
   {
     name: "Components-Form",
     path: "/components/form",
-    component: () => import('./Form-vsvNdC80.mjs')
+    component: () => import('./Form-Max5nMhf.mjs')
   },
   {
     name: "Components-Grid",
     path: "/components/grid",
-    component: () => import('./Grid-f9lddF5l.mjs')
+    component: () => import('./Grid-B0NkTsJ5.mjs')
   },
   {
     name: "Components-Icon",
     path: "/components/icon",
-    component: () => import('./Icon-CnNXSnnS.mjs')
+    component: () => import('./Icon-BBawVIvN.mjs')
   },
   {
     name: "Components-List",
     path: "/components/list",
-    component: () => import('./List-q3QgfNMN.mjs')
+    component: () => import('./List-jg7xeOHU.mjs')
   },
   {
     name: "Components-Menu",
     path: "/components/menu",
-    component: () => import('./Menu-yAVA4zk5.mjs')
+    component: () => import('./Menu-DfZd3ljq.mjs')
   },
   {
     name: "Components-Rate",
     path: "/components/rate",
-    component: () => import('./Rate-DVNHNwWp.mjs')
+    component: () => import('./Rate-DiU1WF65.mjs')
   },
   {
     name: "Components-Spin",
     path: "/components/spin",
-    component: () => import('./Spin-DYdIbnOL.mjs')
+    component: () => import('./Spin-BYH0g9bX.mjs')
   },
   {
     name: "Components-Tabs",
     path: "/components/tabs",
-    component: () => import('./Tabs-l2pNDZ1Y.mjs')
+    component: () => import('./Tabs-GvKZHsm7.mjs')
   },
   {
     name: "Components-Time",
     path: "/components/time",
-    component: () => import('./Time-DJMLzsty.mjs')
+    component: () => import('./Time-L2CUQ8ub.mjs')
   },
   {
     name: "Components-Tree",
     path: "/components/tree",
-    component: () => import('./Tree-3YtdRt4e.mjs')
+    component: () => import('./Tree-DJGnMJrc.mjs')
   },
   {
     name: "Maps-GoogleMaps",
     path: "/maps/googlemaps",
     meta: __nuxt_page_meta$7 || {},
     alias: ["/maps"],
-    component: () => import('./GoogleMaps-PbRHDvCp.mjs')
+    component: () => import('./GoogleMaps-BALGDcN4.mjs')
   },
   {
     name: "Components-Affix",
     path: "/components/affix",
-    component: () => import('./Affix-BbZAme2s.mjs')
+    component: () => import('./Affix-a1OGhSfl.mjs')
   },
   {
     name: "Components-Alert",
     path: "/components/alert",
-    component: () => import('./Alert-IgnYPdTB.mjs')
+    component: () => import('./Alert-B_D7r-iq.mjs')
   },
   {
     name: "Components-Badge",
     path: "/components/badge",
-    component: () => import('./Badge-v7Ixz-c-.mjs')
+    component: () => import('./Badge-Bz2be8jN.mjs')
   },
   {
     name: "Components-Empty",
     path: "/components/empty",
-    component: () => import('./Empty-Va_CR_Yx.mjs')
+    component: () => import('./Empty-ury47KyK.mjs')
   },
   {
     name: "Components-Image",
     path: "/components/image",
-    component: () => import('./Image-B5kn-Crf.mjs')
+    component: () => import('./Image-MWuxetSg.mjs')
   },
   {
     name: "Components-Input",
     path: "/components/input",
-    component: () => import('./Input-DR6aBmud.mjs')
+    component: () => import('./Input-CEDHjCDK.mjs')
   },
   {
     name: "Components-Modal",
     path: "/components/modal",
-    component: () => import('./Modal-kGkBLNrN.mjs')
+    component: () => import('./Modal-jR_I5FWx.mjs')
   },
   {
     name: "Components-Radio",
     path: "/components/radio",
-    component: () => import('./Radio-BtorU-lF.mjs')
+    component: () => import('./Radio-srokWmrp.mjs')
   },
   {
     name: "Components-Space",
     path: "/components/space",
-    component: () => import('./Space-ReNLULz8.mjs')
+    component: () => import('./Space-CEoPQwns.mjs')
   },
   {
     name: "Components-Steps",
     path: "/components/steps",
-    component: () => import('./Steps-Bkgz_Fpe.mjs')
+    component: () => import('./Steps--m6jQIGc.mjs')
   },
   {
     name: "Components-Table",
     path: "/components/table",
-    component: () => import('./Table-myxj0GQq.mjs')
+    component: () => import('./Table-BBSPwCkN.mjs')
   },
   {
     name: "Components-Thing",
     path: "/components/thing",
-    component: () => import('./Thing-B9AdDr8c.mjs')
+    component: () => import('./Thing-HdeK0r-1.mjs')
   },
   {
     name: "Editors-Milkdown",
     path: "/editors/milkdown",
-    component: () => import('./Milkdown-DP8d1cUo.mjs')
+    component: () => import('./Milkdown-BExdne-3.mjs')
   },
   {
     name: "Layout-FullWidth",
     path: "/layout/fullwidth",
     meta: __nuxt_page_meta$6 || {},
     alias: ["/layout"],
-    component: () => import('./FullWidth-DTTtp7oC.mjs')
+    component: () => import('./FullWidth-Dd-1BYTr.mjs')
   },
   {
     name: "Tables-DataTable",
     path: "/tables/datatable",
-    component: () => import('./DataTable-Cv_4w9mX.mjs')
+    component: () => import('./DataTable-CIyycpP3.mjs')
   },
   {
     name: "Charts-ApexCharts",
     path: "/charts/apexcharts",
     meta: __nuxt_page_meta$5 || {},
     alias: ["/charts"],
-    component: () => import('./ApexCharts-ByC0E0Ty.mjs')
+    component: () => import('./ApexCharts-n5CYIXYT.mjs')
   },
   {
     name: "Components-Anchor",
     path: "/components/anchor",
-    component: () => import('./Anchor-DRmAaqaD.mjs')
+    component: () => import('./Anchor-CXRABc9m.mjs')
   },
   {
     name: "Components-Avatar",
     path: "/components/avatar",
     meta: __nuxt_page_meta$4 || {},
     alias: ["/components"],
-    component: () => import('./Avatar-CFF0Y4tP.mjs')
+    component: () => import('./Avatar-Q9N8FBZr.mjs')
   },
   {
     name: "Components-Button",
     path: "/components/button",
-    component: () => import('./Button-BB_QrEQk.mjs')
+    component: () => import('./Button-B7ZPzepJ.mjs')
   },
   {
     name: "Components-Dialog",
     path: "/components/dialog",
-    component: () => import('./Dialog-DkA7g3Ik.mjs')
+    component: () => import('./Dialog-Bx8c3HBs.mjs')
   },
   {
     name: "Components-Drawer",
     path: "/components/drawer",
-    component: () => import('./Drawer-DxhAD3he.mjs')
+    component: () => import('./Drawer-n9Y1OeCm.mjs')
   },
   {
     name: "Components-Layout",
     path: "/components/layout",
-    component: () => import('./Layout-CJjA7Ige.mjs')
+    component: () => import('./Layout-BJHQLZYe.mjs')
   },
   {
     name: "Components-Result",
     path: "/components/result",
-    component: () => import('./Result-CW4dqcXu.mjs')
+    component: () => import('./Result-DCX_iLWo.mjs')
   },
   {
     name: "Components-Select",
     path: "/components/select",
-    component: () => import('./Select-Cdk3HYJW.mjs')
+    component: () => import('./Select-BbAkHyuk.mjs')
   },
   {
     name: "Components-Slider",
     path: "/components/slider",
-    component: () => import('./Slider-DJlTStvQ.mjs')
+    component: () => import('./Slider-BIdawHsx.mjs')
   },
   {
     name: "Components-Switch",
     path: "/components/switch",
-    component: () => import('./Switch-AGxFiCRO.mjs')
+    component: () => import('./Switch-B00w1R86.mjs')
   },
   {
     name: "Components-Upload",
     path: "/components/upload",
-    component: () => import('./Upload-CJPaYh0U.mjs')
+    component: () => import('./Upload-jBTDOJf7.mjs')
   },
   {
     name: "Components-BackTop",
     path: "/components/backtop",
-    component: () => import('./BackTop-Bfl53iAw.mjs')
+    component: () => import('./BackTop-Sazu7STQ.mjs')
   },
   {
     name: "Components-Divider",
     path: "/components/divider",
-    component: () => import('./Divider-CsraCEcl.mjs')
+    component: () => import('./Divider-CF0S5UJT.mjs')
   },
   {
     name: "Components-Mention",
     path: "/components/mention",
-    component: () => import('./Mention-BpzWWtZW.mjs')
+    component: () => import('./Mention-Cn0dPD0z.mjs')
   },
   {
     name: "Components-Message",
     path: "/components/message",
-    component: () => import('./Message-08xd3o_8.mjs')
+    component: () => import('./Message-Dg1v5U3K.mjs')
   },
   {
     name: "Components-Popover",
     path: "/components/popover",
-    component: () => import('./Popover-Ba6K5BBu.mjs')
+    component: () => import('./Popover-gzLrkO9R.mjs')
   },
   {
     name: "Components-Tooltip",
     path: "/components/tooltip",
-    component: () => import('./Tooltip-C-wH-pec.mjs')
+    component: () => import('./Tooltip-CYZfnacR.mjs')
   },
   {
     name: "Layout-LeftSidebar",
     path: "/layout/leftsidebar",
-    component: () => import('./LeftSidebar-B_772QQO.mjs')
+    component: () => import('./LeftSidebar-DltOR7dd.mjs')
   },
   {
     name: "ForgotPassword",
     path: "/auth/forgotpassword",
     meta: __nuxt_page_meta$3 || {},
     alias: ["/forgot-password"],
-    component: () => import('./ForgotPassword-CemWchmu.mjs')
+    component: () => import('./ForgotPassword-C5LHRVip.mjs')
   },
   {
     name: "Components-Calendar",
     path: "/components/calendar",
-    component: () => import('./Calendar-eKTLRyNl.mjs')
+    component: () => import('./Calendar-BV_ATaAu.mjs')
   },
   {
     name: "Components-Carousel",
     path: "/components/carousel",
-    component: () => import('./Carousel-DxJVuAA3.mjs')
+    component: () => import('./Carousel-DaNwBqK2.mjs')
   },
   {
     name: "Components-Cascader",
     path: "/components/cascader",
-    component: () => import('./Cascader-CNOcjsGM.mjs')
+    component: () => import('./Cascader-B6iQ08cb.mjs')
   },
   {
     name: "Components-Checkbox",
     path: "/components/checkbox",
-    component: () => import('./Checkbox-DDLoLt1n.mjs')
+    component: () => import('./Checkbox-7-sSgFRY.mjs')
   },
   {
     name: "Components-Collapse",
     path: "/components/collapse",
-    component: () => import('./Collapse-Dnqg_37f.mjs')
+    component: () => import('./Collapse-ERxGSrXY.mjs')
   },
   {
     name: "Components-Dropdown",
     path: "/components/dropdown",
-    component: () => import('./Dropdown-ec5BCluP.mjs')
+    component: () => import('./Dropdown-DbnyW0JE.mjs')
   },
   {
     name: "Components-Ellipsis",
     path: "/components/ellipsis",
-    component: () => import('./Ellipsis-C8lCJw6S.mjs')
+    component: () => import('./Ellipsis-CUbH8NTV.mjs')
   },
   {
     name: "Components-Progress",
     path: "/components/progress",
-    component: () => import('./Progress-C8kfx2iv.mjs')
+    component: () => import('./Progress-M8ipvn-7.mjs')
   },
   {
     name: "Components-Skeleton",
     path: "/components/skeleton",
-    component: () => import('./Skeleton-Cp8OoCgU.mjs')
+    component: () => import('./Skeleton-2G-fMDXt.mjs')
   },
   {
     name: "Components-Timeline",
     path: "/components/timeline",
-    component: () => import('./Timeline-BDI5Z1_4.mjs')
+    component: () => import('./Timeline-BO3mp7Tx.mjs')
   },
   {
     name: "Components-Transfer",
     path: "/components/transfer",
-    component: () => import('./Transfer-CEpm7XGm.mjs')
+    component: () => import('./Transfer-tmxeh8mT.mjs')
   },
   {
     name: "Dashboard-Analytics",
     path: "/dashboard/analytics",
     meta: __nuxt_page_meta$2 || {},
     alias: ["/", "/dashboard"],
-    component: () => import('./Analytics-3U_Z9aGa.mjs')
+    component: () => import('./Analytics-DZhR-RvM.mjs')
   },
   {
     name: "Dashboard-eCommerce",
     path: "/dashboard/ecommerce",
-    component: () => import('./eCommerce-9Ri_C5u1.mjs')
+    component: () => import('./eCommerce-D3k0kuOQ.mjs')
   },
   {
     name: "Layout-RightSidebar",
     path: "/layout/rightsidebar",
-    component: () => import('./RightSidebar-DDtSe-UN.mjs')
+    component: () => import('./RightSidebar-FS10LlEf.mjs')
   },
   {
     name: "Toolbox-RefreshTool",
@@ -1337,134 +1332,134 @@ const _routes = [
   {
     name: "Components-Countdown",
     path: "/components/countdown",
-    component: () => import('./Countdown-xV2F7FRN.mjs')
+    component: () => import('./Countdown-Km1YAC6o.mjs')
   },
   {
     name: "Components-DataTable",
     path: "/components/datatable",
-    component: () => import('./DataTable-Cnz6wZgG.mjs')
+    component: () => import('./DataTable-D_2IU7I4.mjs')
   },
   {
     name: "Components-Popselect",
     path: "/components/popselect",
-    component: () => import('./Popselect-D_xxTRlO.mjs')
+    component: () => import('./Popselect-Cf27hTm-.mjs')
   },
   {
     name: "Components-Scrollbar",
     path: "/components/scrollbar",
-    component: () => import('./Scrollbar-DLW4Lmiz.mjs')
+    component: () => import('./Scrollbar-C3OjilOF.mjs')
   },
   {
     name: "Components-Statistic",
     path: "/components/statistic",
-    component: () => import('./Statistic-XiBbVRTj.mjs')
+    component: () => import('./Statistic-ByY3mvH6.mjs')
   },
   {
     name: "Components-Watermark",
     path: "/components/watermark",
-    component: () => import('./Watermark-DrKRWVIF.mjs')
+    component: () => import('./Watermark-tUEx0t4b.mjs')
   },
   {
     name: "Apps-Calendars-VueCal",
     path: "/apps/calendars/vuecal",
-    component: () => import('./VueCal-D8pTEY96.mjs')
+    component: () => import('./VueCal-B5lUdp3X.mjs')
   },
   {
     name: "Components-Breadcrumb",
     path: "/components/breadcrumb",
-    component: () => import('./Breadcrumb-DqiwVsQj.mjs')
+    component: () => import('./Breadcrumb-BsKLPwNa.mjs')
   },
   {
     name: "Components-DatePicker",
     path: "/components/datepicker",
-    component: () => import('./DatePicker-BqsCclPj.mjs')
+    component: () => import('./DatePicker-CZ_ytjGS.mjs')
   },
   {
     name: "Components-LegacyGrid",
     path: "/components/legacygrid",
-    component: () => import('./LegacyGrid-DJJ7CFuk.mjs')
+    component: () => import('./LegacyGrid-D7iwrFwn.mjs')
   },
   {
     name: "Components-PageHeader",
     path: "/components/pageheader",
-    component: () => import('./PageHeader-Cj91Lywe.mjs')
+    component: () => import('./PageHeader-BupBVTrt.mjs')
   },
   {
     name: "Components-Pagination",
     path: "/components/pagination",
-    component: () => import('./Pagination-D_dEhxC9.mjs')
+    component: () => import('./Pagination-C0yGgt90.mjs')
   },
   {
     name: "Components-Popconfirm",
     path: "/components/popconfirm",
-    component: () => import('./Popconfirm-DWv9SUT8.mjs')
+    component: () => import('./Popconfirm-CKt7KIeS.mjs')
   },
   {
     name: "Components-TimePicker",
     path: "/components/timepicker",
-    component: () => import('./TimePicker-ClZodtux.mjs')
+    component: () => import('./TimePicker-B7DZ19ln.mjs')
   },
   {
     name: "Components-TreeSelect",
     path: "/components/treeselect",
-    component: () => import('./TreeSelect-CdAVzvnP.mjs')
+    component: () => import('./TreeSelect-DDJyC0D4.mjs')
   },
   {
     name: "Components-Typography",
     path: "/components/typography",
-    component: () => import('./Typography-BO8QRC7n.mjs')
+    component: () => import('./Typography-DRi56Dbc.mjs')
   },
   {
     name: "Components-ColorPicker",
     path: "/components/colorpicker",
-    component: () => import('./ColorPicker-CNib0rlv.mjs')
+    component: () => import('./ColorPicker-C7SPfDnS.mjs')
   },
   {
     name: "Components-DynamicTags",
     path: "/components/dynamictags",
-    component: () => import('./DynamicTags-Dt8HOSbk.mjs')
+    component: () => import('./DynamicTags-umx8i-wC.mjs')
   },
   {
     name: "Components-InputNumber",
     path: "/components/inputnumber",
-    component: () => import('./InputNumber-CvPUKrGK.mjs')
+    component: () => import('./InputNumber-19QlMxuv.mjs')
   },
   {
     name: "Components-AutoComplete",
     path: "/components/autocomplete",
-    component: () => import('./AutoComplete-CuYSeGCE.mjs')
+    component: () => import('./AutoComplete-DbZy7kOx.mjs')
   },
   {
     name: "Components-Descriptions",
     path: "/components/descriptions",
-    component: () => import('./Descriptions-BZZzGnKC.mjs')
+    component: () => import('./Descriptions-BJx5AXOR.mjs')
   },
   {
     name: "Components-DynamicInput",
     path: "/components/dynamicinput",
-    component: () => import('./DynamicInput-D-bumpKd.mjs')
+    component: () => import('./DynamicInput-Y0dYt1to.mjs')
   },
   {
     name: "Components-GradientText",
     path: "/components/gradienttext",
-    component: () => import('./GradientText-C2_BjllX.mjs')
+    component: () => import('./GradientText-Bt4GGBiC.mjs')
   },
   {
     name: "Components-Notification",
     path: "/components/notification",
-    component: () => import('./Notification-CXzAogDD.mjs')
+    component: () => import('./Notification-BLd6tg7p.mjs')
   },
   {
     name: "Components-NumberAnimation",
     path: "/components/numberanimation",
-    component: () => import('./NumberAnimation-mubWXu6-.mjs')
+    component: () => import('./NumberAnimation-DDwKvOS-.mjs')
   },
   {
     name: "Apps-Calendars-FullCalendar",
     path: "/apps/calendars/fullcalendar",
     meta: __nuxt_page_meta || {},
     alias: ["/apps", "/apps/calendars"],
-    component: () => import('./FullCalendar-_4_F7pnP.mjs')
+    component: () => import('./FullCalendar-uiYGJxfL.mjs')
   },
   {
     name: "Tables-grid-assets-dataGenerate",
@@ -1479,17 +1474,17 @@ const _routes = [
   {
     name: "Tables-data-tables-components-Basic",
     path: "/tables/data-tables-components/basic",
-    component: () => import('./Basic-pOrvwpia.mjs')
+    component: () => import('./Basic-DgCzChDt.mjs')
   },
   {
     name: "Tables-data-tables-components-Empty",
     path: "/tables/data-tables-components/empty",
-    component: () => import('./Empty-DpBd-mt7.mjs')
+    component: () => import('./Empty-BFx_EPpa.mjs')
   },
   {
     name: "Tables-data-tables-components-Merge",
     path: "/tables/data-tables-components/merge",
-    component: () => import('./Merge-BABxRaBU.mjs')
+    component: () => import('./Merge-OhkKtdUa.mjs')
   },
   {
     name: "Tables-grid-assets-plugin-date",
@@ -1499,12 +1494,12 @@ const _routes = [
   {
     name: "Tables-data-tables-components-Expand",
     path: "/tables/data-tables-components/expand",
-    component: () => import('./Expand-B6VlsTaH.mjs')
+    component: () => import('./Expand-7U_qxyy3.mjs')
   },
   {
     name: "Tables-data-tables-components-Sorting",
     path: "/tables/data-tables-components/sorting",
-    component: () => import('./Sorting-CIXT5xbE.mjs')
+    component: () => import('./Sorting-CiXACll6.mjs')
   },
   {
     name: "Tables-grid-assets-plugin-select",
@@ -1514,47 +1509,47 @@ const _routes = [
   {
     name: "Components-data-table-components-Basic",
     path: "/components/data-table-components/basic",
-    component: () => import('./Basic-CFEOdL2L.mjs')
+    component: () => import('./Basic-Bzk3fzsa.mjs')
   },
   {
     name: "Components-data-table-components-Merge",
     path: "/components/data-table-components/merge",
-    component: () => import('./Merge-DfLphP0l.mjs')
+    component: () => import('./Merge-ZceMtwUO.mjs')
   },
   {
     name: "Tables-data-tables-components-Editable",
     path: "/tables/data-tables-components/editable",
-    component: () => import('./Editable-ScKvSd2J.mjs')
+    component: () => import('./Editable-BdmDyWgp.mjs')
   },
   {
     name: "Tables-data-tables-components-Draggable",
     path: "/tables/data-tables-components/draggable",
-    component: () => import('./Draggable-BwdNQuet.mjs')
+    component: () => import('./Draggable-BK0-od_p.mjs')
   },
   {
     name: "Tables-data-tables-components-LargeData",
     path: "/tables/data-tables-components/largedata",
-    component: () => import('./LargeData-CGTgViKw.mjs')
+    component: () => import('./LargeData-o8MHciMw.mjs')
   },
   {
     name: "Tables-data-tables-components-Selection",
     path: "/tables/data-tables-components/selection",
-    component: () => import('./Selection-jgHaqzbq.mjs')
+    component: () => import('./Selection-CfilajhZ.mjs')
   },
   {
     name: "Components-data-table-components-Sorting",
     path: "/components/data-table-components/sorting",
-    component: () => import('./Sorting-BPgKa7pR.mjs')
+    component: () => import('./Sorting-Cr4Xan-z.mjs')
   },
   {
     name: "Components-data-table-components-Draggable",
     path: "/components/data-table-components/draggable",
-    component: () => import('./Draggable-B98zej4H.mjs')
+    component: () => import('./Draggable-B0cZ7Xeg.mjs')
   },
   {
     name: "Components-data-table-components-Selection",
     path: "/components/data-table-components/selection",
-    component: () => import('./Selection-CcJcdpbG.mjs')
+    component: () => import('./Selection-BTBqPlrj.mjs')
   }
 ];
 const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
@@ -37699,5 +37694,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { fadeInScaleUpTransition as $, replaceable as A, Button as B, fadeInHeightExpandTransition as C, iconSwitchTransition as D, NFadeInExpandTransition as E, error as F, NIconSwitchTransition as G, warn as H, resolveSlot as I, useFormItem as J, uploadLight as K, formLight as L, keysOf as M, NCard as N, commonVariables$n as O, formatLength as P, formItemInjectionKey as Q, resolveSlotWithTypedProps as R, Scrollbar$1 as S, useLocale as T, useRtl as U, VResizeObserver as V, inputLight as W, useStyle as X, NBaseLoading as Y, fadeInTransition as Z, _export_sfc as _, _sfc_main$s as a, NDivider as a$, LazyTeleport as a0, imageLight as a1, toDate as a2, getDefaultOptions as a3, enUS as a4, startOfWeek as a5, InfoIcon as a6, WarningIcon as a7, ErrorIcon as a8, SuccessIcon as a9, selectLight as aA, markEventEffectPerformed as aB, VVirtualList as aC, XButton as aD, FocusDetector as aE, datePickerLight as aF, isSlotEmpty as aG, switchLight as aH, NPopover as aI, keep as aJ, popconfirmLight as aK, popoverBaseProps as aL, Wrapper as aM, NTag as aN, VOverflow as aO, getTitleAttribute as aP, internalSelectionLight as aQ, useOnResize as aR, isSameWeek as aS, timePickerLight as aT, renderIcon as aU, NDropdown as aV, NText as aW, typographyLight as aX, useAuthStore as aY, collapseTransitionLight as aZ, useMessage as a_, progressLight as aa, useThemeStore as ab, NSpin as ac, useNuxtApp as ad, asyncDataDefaults as ae, createError as af, fetchDefaults as ag, useRequestFetch as ah, NDrawer as ai, NDrawerContent as aj, themeLight as ak, Scrollbar as al, style$g as am, buttonGroupInjectionKey as an, insideModal as ao, insidePopover as ap, checkboxLight as aq, Binder as ar, VTarget as as, VFollower as at, useAdjustedTo as au, NInternalSelectMenu as av, patternMatched as aw, filterOptions as ax, createTmOptions as ay, createValOptMap as az, NModal as b, descriptionsLight as b$, Logo as b0, __nuxt_component_0 as b1, isMobile as b2, NConfigProvider as b3, collapseLight as b4, resolveWrappedSlotWithProps as b5, ChevronRightIcon as b6, skeletonLight as b7, avatarGroupInjectionKey as b8, avatarGroupLight as b9, stepsLight as bA, ErrorIcon$1 as bB, useMergedClsPrefix as bC, configProviderInjectionKey as bD, cssrAnchorMetaName as bE, dataTableLight as bF, paginationLight as bG, ellipsisLight as bH, anchorLight as bI, dialogApiInjectionKey as bJ, NResult as bK, sliderLight as bL, lockHtmlScrollRightCompensationRef as bM, backTopLight as bN, mentionLight as bO, calendarLight as bP, elementLight as bQ, transferLight$1 as bR, useMainStore as bS, statisticLight as bT, watermarkLight as bU, breadcrumbLight as bV, pageHeaderLight as bW, treeSelectLight as bX, colorPickerLight as bY, dynamicTagsLight as bZ, commonProps as b_, NPopselect as ba, NEmpty as bb, carouselLight as bc, timelineLight as bd, tableLight as be, NMenu as bf, getFirstSlotVNodeWithTypedProps as bg, autoCompleteLight as bh, useLocalesStore as bi, useI18n as bj, alertLight as bk, spaceLight as bl, color2Class as bm, themeLight$4 as bn, radioLight as bo, listLight as bp, thingLight as bq, layoutLight as br, positionProp as bs, layoutSiderInjectionKey as bt, XScrollbar as bu, treeLight as bv, NBadge as bw, inputNumberLight as bx, FinishedIcon as by, cascaderLight as bz, NAvatar as c, dynamicInputLight as c0, gradientTextLight as c1, useNotification as c2, logo as c3, NTooltip as d, entry$1 as default, c as e, cssrAnchorMetaName$1 as f, createInjectionKey as g, NBaseIcon as h, NBaseClose as i, cB as j, cM as k, c$1 as l, cE as m, cNotM as n, omit as o, flatten as p, resolveWrappedSlot as q, render as r, useTheme as s, throwError as t, useConfig as u, createKey as v, warnOnce as w, useThemeClass as x, tabsLight as y, call as z };
+export { fadeInScaleUpTransition as $, replaceable as A, Button as B, fadeInHeightExpandTransition as C, iconSwitchTransition as D, NFadeInExpandTransition as E, error as F, NIconSwitchTransition as G, warn as H, resolveSlot as I, useFormItem as J, uploadLight as K, formLight as L, keysOf as M, NCard as N, commonVariables$n as O, formatLength as P, formItemInjectionKey as Q, resolveSlotWithTypedProps as R, Scrollbar$1 as S, useLocale as T, useRtl as U, VResizeObserver as V, inputLight as W, useStyle as X, NBaseLoading as Y, fadeInTransition as Z, _sfc_main$s as _, _export_sfc as a, NDivider as a$, LazyTeleport as a0, imageLight as a1, toDate as a2, getDefaultOptions as a3, enUS as a4, startOfWeek as a5, InfoIcon as a6, WarningIcon as a7, ErrorIcon as a8, SuccessIcon as a9, selectLight as aA, markEventEffectPerformed as aB, VVirtualList as aC, XButton as aD, FocusDetector as aE, datePickerLight as aF, isSlotEmpty as aG, switchLight as aH, NPopover as aI, keep as aJ, popconfirmLight as aK, popoverBaseProps as aL, Wrapper as aM, NTag as aN, VOverflow as aO, getTitleAttribute as aP, internalSelectionLight as aQ, useOnResize as aR, isSameWeek as aS, timePickerLight as aT, renderIcon as aU, NDropdown as aV, NText as aW, typographyLight as aX, useAuthStore as aY, collapseTransitionLight as aZ, useMessage as a_, progressLight as aa, useThemeStore as ab, NSpin as ac, useNuxtApp as ad, asyncDataDefaults as ae, createError as af, fetchDefaults as ag, useRequestFetch as ah, NDrawer as ai, NDrawerContent as aj, themeLight as ak, Scrollbar as al, style$g as am, buttonGroupInjectionKey as an, insideModal as ao, insidePopover as ap, checkboxLight as aq, Binder as ar, VTarget as as, VFollower as at, useAdjustedTo as au, NInternalSelectMenu as av, patternMatched as aw, filterOptions as ax, createTmOptions as ay, createValOptMap as az, NModal as b, descriptionsLight as b$, Logo as b0, __nuxt_component_0 as b1, isMobile as b2, NConfigProvider as b3, collapseLight as b4, resolveWrappedSlotWithProps as b5, ChevronRightIcon as b6, skeletonLight as b7, avatarGroupInjectionKey as b8, avatarGroupLight as b9, stepsLight as bA, ErrorIcon$1 as bB, useMergedClsPrefix as bC, configProviderInjectionKey as bD, cssrAnchorMetaName as bE, dataTableLight as bF, paginationLight as bG, ellipsisLight as bH, anchorLight as bI, dialogApiInjectionKey as bJ, NResult as bK, sliderLight as bL, lockHtmlScrollRightCompensationRef as bM, backTopLight as bN, mentionLight as bO, calendarLight as bP, elementLight as bQ, transferLight$1 as bR, useMainStore as bS, statisticLight as bT, watermarkLight as bU, breadcrumbLight as bV, pageHeaderLight as bW, treeSelectLight as bX, colorPickerLight as bY, dynamicTagsLight as bZ, commonProps as b_, NPopselect as ba, NEmpty as bb, carouselLight as bc, timelineLight as bd, tableLight as be, NMenu as bf, getFirstSlotVNodeWithTypedProps as bg, autoCompleteLight as bh, useLocalesStore as bi, useI18n as bj, alertLight as bk, spaceLight as bl, color2Class as bm, themeLight$4 as bn, radioLight as bo, listLight as bp, thingLight as bq, layoutLight as br, positionProp as bs, layoutSiderInjectionKey as bt, XScrollbar as bu, treeLight as bv, NBadge as bw, inputNumberLight as bx, FinishedIcon as by, cascaderLight as bz, NAvatar as c, dynamicInputLight as c0, gradientTextLight as c1, useNotification as c2, logo as c3, NTooltip as d, entry$1 as default, c as e, cssrAnchorMetaName$1 as f, createInjectionKey as g, NBaseIcon as h, NBaseClose as i, cB as j, cM as k, c$1 as l, cE as m, cNotM as n, omit as o, flatten as p, resolveWrappedSlot as q, render as r, useTheme as s, throwError as t, useConfig as u, createKey as v, warnOnce as w, useThemeClass as x, tabsLight as y, call as z };
 //# sourceMappingURL=server.mjs.map
