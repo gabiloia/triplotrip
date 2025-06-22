@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "github>nuxt/renovate-config-nuxt"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "ignoreDeps": [
+    "typescript"
+  ],
+  "packageRules": [{
+    "matchDepTypes": ["resolutions"],
+    "enabled": false
+  }]
+}
