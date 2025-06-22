@@ -1,4 +1,0 @@
-const ProfileActivity_vue_vue_type_style_index_0_scoped_bde1802a_lang = ".activity[data-v-bde1802a]{container-type:inline-size}.activity .masonry[data-v-bde1802a]{--card-gap:30px;-moz-column-count:3;column-count:3;-moz-column-gap:var(--card-gap);column-gap:var(--card-gap)}@container (min-width: 1600px){.activity .masonry[data-v-bde1802a]{-moz-column-count:4;column-count:4}}@container (max-width: 1200px){.activity .masonry[data-v-bde1802a]{-moz-column-count:3;column-count:3}}@container (max-width: 900px){.activity .masonry[data-v-bde1802a]{-moz-column-count:2;column-count:2}}@container (max-width: 600px){.activity .masonry[data-v-bde1802a]{-moz-column-count:1;column-count:1}}.activity .masonry .card-wrap[data-v-bde1802a]{margin-bottom:var(--card-gap);overflow:hidden}";
-
-export { ProfileActivity_vue_vue_type_style_index_0_scoped_bde1802a_lang as P };
-//# sourceMappingURL=ProfileActivity-styles-1.mjs-DCLp9wTM.mjs.map

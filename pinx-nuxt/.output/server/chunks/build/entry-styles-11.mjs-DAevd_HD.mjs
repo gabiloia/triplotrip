@@ -1,0 +1,4 @@
+const MainFooter_vue_vue_type_style_index_0_scoped_bb3ecd8d_lang = ".footer[data-v-bb3ecd8d]{font-size:13px}.footer[data-v-bb3ecd8d],.footer .wrap[data-v-bb3ecd8d]{max-width:100%;overflow:hidden;width:100%}.footer .wrap[data-v-bb3ecd8d]{margin:0 auto;padding:0 var(--view-padding)}.footer .wrap .copy[data-v-bb3ecd8d]{line-height:1.6}.footer .wrap .copy a[data-v-bb3ecd8d]{font-weight:700;text-decoration:none}.footer .wrap .copy[data-v-bb3ecd8d] *{display:inline}.footer .wrap .copy i[data-v-bb3ecd8d]{display:inline-block}.footer.boxed .wrap[data-v-bb3ecd8d]{max-width:var(--boxed-width)}@media (max-width:700px){.footer[data-v-bb3ecd8d]{font-size:10px}.footer i.n-icon[data-v-bb3ecd8d]{font-size:18px!important}}";
+
+export { MainFooter_vue_vue_type_style_index_0_scoped_bb3ecd8d_lang as M };
+//# sourceMappingURL=entry-styles-11.mjs-DAevd_HD.mjs.map
