@@ -867,7 +867,7 @@ const _routes = [
     path: "/auth/login",
     meta: __nuxt_page_meta$f || {},
     alias: ["/login"],
-    component: () => import('./Login-CWgfDdkz.mjs')
+    component: () => import('./Login-Ajgh12i7.mjs')
   },
   {
     name: "Cards-List",
@@ -902,12 +902,12 @@ const _routes = [
   {
     name: "Cards-Combo",
     path: "/cards/combo",
-    component: () => import('./Combo-DfMiymiq.mjs')
+    component: () => import('./Combo-DMrrgSc8.mjs')
   },
   {
     name: "Cards-Extra",
     path: "/cards/extra",
-    component: () => import('./Extra-lopcVWZD.mjs')
+    component: () => import('./Extra-uYYdq1ne.mjs')
   },
   {
     name: "Tables-Base",
@@ -942,7 +942,7 @@ const _routes = [
     path: "/auth/register",
     meta: __nuxt_page_meta$9 || {},
     alias: ["/register"],
-    component: () => import('./Register-BCMXDaKY.mjs')
+    component: () => import('./Register-zHAbMuJ6.mjs')
   },
   {
     name: "Editors-Quill",
@@ -1229,7 +1229,7 @@ const _routes = [
     path: "/auth/forgotpassword",
     meta: __nuxt_page_meta$3 || {},
     alias: ["/forgot-password"],
-    component: () => import('./ForgotPassword-CGQbpL8y.mjs')
+    component: () => import('./ForgotPassword-BLnsEBBD.mjs')
   },
   {
     name: "Components-Calendar",
@@ -1291,12 +1291,12 @@ const _routes = [
     path: "/dashboard/analytics",
     meta: __nuxt_page_meta$2 || {},
     alias: ["/", "/dashboard"],
-    component: () => import('./Analytics-D0CuBqT0.mjs')
+    component: () => import('./Analytics-CIFseICt.mjs')
   },
   {
     name: "Dashboard-eCommerce",
     path: "/dashboard/ecommerce",
-    component: () => import('./eCommerce-D5eYCY4G.mjs')
+    component: () => import('./eCommerce-Bk0AkIz0.mjs')
   },
   {
     name: "Layout-RightSidebar",
@@ -33628,7 +33628,7 @@ _sfc_main$f.setup = (props, ctx) => {
 };
 const _sfc_main$e = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "pill-wrapper flex items-center" }, _attrs))} data-v-8099e838>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "pill-wrapper flex items-center" }, _attrs))} data-v-56cdb806>`);
   ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
   _push(`</div>`);
 }
@@ -33638,7 +33638,7 @@ _sfc_main$e.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("app-layouts/common/Toolbar/PillWrapper.vue");
   return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
-const PillWrapper = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-8099e838"]]);
+const PillWrapper = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-56cdb806"]]);
 const Sunny = "ion:sunny";
 const Moon = "ion:moon";
 const SunnyOutline = "ion:sunny-outline";

@@ -1,6 +1,0 @@
-import { a as buildAssetsURL } from '../routes/renderer.mjs';
-
-const Register_vue_vue_type_style_index_0_scoped_2cd8c0b0_lang = ".page-auth[data-v-2cd8c0b0],.page-auth .wrapper[data-v-2cd8c0b0]{min-height:100vh}.page-auth .wrapper .image-box[data-v-2cd8c0b0]{position:relative}.page-auth .wrapper .image-box[data-v-2cd8c0b0]:after{background-image:url(" + buildAssetsURL("pattern-onboard.3h4CNwFN.png") + ');background-position:50%;background-size:500px;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.page-auth .wrapper .form-box[data-v-2cd8c0b0]{padding:50px}.page-auth .wrapper .form-box.centered[data-v-2cd8c0b0]{flex-basis:100%}.page-auth .wrapper .form-box.centered .form-wrap[data-v-2cd8c0b0]{background-color:var(--bg-default-color);border-radius:20px;max-width:500px;padding:60px;width:100%;@apply shadow-xl;}@media (max-width:600px){.page-auth .wrapper .form-box.centered[data-v-2cd8c0b0]{padding:4%}.page-auth .wrapper .form-box.centered .form-wrap[data-v-2cd8c0b0]{padding:8%}}@media (max-width:800px){.page-auth .wrapper .image-box[data-v-2cd8c0b0]{display:none}.page-auth .wrapper .form-box[data-v-2cd8c0b0]{flex-basis:100%}}.page-auth .wrapper .image-box[data-v-2cd8c0b0]{background-color:var(--7e28f747)}';
-
-export { Register_vue_vue_type_style_index_0_scoped_2cd8c0b0_lang as R };
-//# sourceMappingURL=Register-styles-1.mjs-8e8wrwLg.mjs.map
