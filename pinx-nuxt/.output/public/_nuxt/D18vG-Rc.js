@@ -1,0 +1,1 @@
+import{y as t,cu as a,a5 as i,ah as u}from"./CghEsQSB.js";function f(r,n){n&&(t(()=>{const{value:e}=r;e&&a.registerHandler(e,n)}),i(r,(e,s)=>{s&&a.unregisterHandler(s)},{deep:!1}),u(()=>{const{value:e}=r;e&&a.unregisterHandler(e)}))}export{f as u};
