@@ -867,7 +867,7 @@ const _routes = [
     path: "/auth/login",
     meta: __nuxt_page_meta$f || {},
     alias: ["/login"],
-    component: () => import('./Login-i5MNnj90.mjs')
+    component: () => import('./Login-BErt4SRv.mjs')
   },
   {
     name: "Cards-List",
@@ -942,7 +942,7 @@ const _routes = [
     path: "/auth/register",
     meta: __nuxt_page_meta$9 || {},
     alias: ["/register"],
-    component: () => import('./Register-BsUCuSWG.mjs')
+    component: () => import('./Register-m34KbDDB.mjs')
   },
   {
     name: "Editors-Quill",
@@ -1229,7 +1229,7 @@ const _routes = [
     path: "/auth/forgotpassword",
     meta: __nuxt_page_meta$3 || {},
     alias: ["/forgot-password"],
-    component: () => import('./ForgotPassword-BQBMdS0L.mjs')
+    component: () => import('./ForgotPassword-Cb9U8lAp.mjs')
   },
   {
     name: "Components-Calendar",

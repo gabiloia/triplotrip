@@ -1,0 +1,1 @@
+import{d as n,a9 as t}from"./8g3bmYip.js";const u=n({props:{onFocus:Function,onBlur:Function},setup(o){return()=>t("div",{style:"width: 0; height: 0",tabindex:0,onFocus:o.onFocus,onBlur:o.onBlur})}});export{u as F};
