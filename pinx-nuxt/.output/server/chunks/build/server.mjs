@@ -848,7 +848,7 @@ const _routes = [
     name: "Profile",
     path: "/profile",
     meta: __nuxt_page_meta$i || {},
-    component: () => import('./Profile-62EfGiHQ.mjs')
+    component: () => import('./Profile-D4ax3Vg6.mjs')
   },
   {
     name: "Apps-Chat",
