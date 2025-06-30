@@ -735,7 +735,12 @@ const unhead_k2P3m_ZDyjlr2mMYnoDPwavjsDN8hBlk9cFai0bbopU = /* @__PURE__ */ defin
 function toArray$1(value) {
   return Array.isArray(value) ? value : [value];
 }
-const __nuxt_page_meta$i = { auth: true, roles: "all" };
+const __nuxt_page_meta$j = { auth: true, roles: "all" };
+const __nuxt_page_meta$i = {
+  alias: ["/", "/reservas"],
+  auth: true,
+  roles: "all"
+};
 const __nuxt_page_meta$h = {
   auth: true,
   roles: "all"
@@ -825,7 +830,6 @@ const __nuxt_page_meta$3 = {
   skipPin: true
 };
 const __nuxt_page_meta$2 = {
-  alias: ["/", "/dashboard"],
   auth: true,
   roles: "all"
 };
@@ -847,13 +851,15 @@ const _routes = [
   {
     name: "Profile",
     path: "/profile",
-    meta: __nuxt_page_meta$i || {},
+    meta: __nuxt_page_meta$j || {},
     component: () => import('./Profile-C_MboXBw.mjs')
   },
   {
     name: "Reservas",
     path: "/reservas",
-    component: () => import('./Reservas-DMWMfEou.mjs')
+    meta: __nuxt_page_meta$i || {},
+    alias: ["/", "/reservas"],
+    component: () => import('./Reservas-CN-uUvXz.mjs')
   },
   {
     name: "Apps-Chat",
@@ -872,7 +878,7 @@ const _routes = [
     path: "/auth/login",
     meta: __nuxt_page_meta$f || {},
     alias: ["/login"],
-    component: () => import('./Login-DlRcLz3F.mjs')
+    component: () => import('./Login-BxSY5-fq.mjs')
   },
   {
     name: "Cards-List",
@@ -952,7 +958,7 @@ const _routes = [
     path: "/auth/register",
     meta: __nuxt_page_meta$9 || {},
     alias: ["/register"],
-    component: () => import('./Register-zc9NTQCw.mjs')
+    component: () => import('./Register-DMIPuuGE.mjs')
   },
   {
     name: "Editors-Quill",
@@ -1239,7 +1245,7 @@ const _routes = [
     path: "/auth/forgotpassword",
     meta: __nuxt_page_meta$3 || {},
     alias: ["/forgot-password"],
-    component: () => import('./ForgotPassword-BwmZI2tD.mjs')
+    component: () => import('./ForgotPassword-NvV59d0H.mjs')
   },
   {
     name: "Components-Calendar",
@@ -1300,8 +1306,7 @@ const _routes = [
     name: "Dashboard-Analytics",
     path: "/dashboard/analytics",
     meta: __nuxt_page_meta$2 || {},
-    alias: ["/", "/dashboard"],
-    component: () => import('./Analytics-tELy6gdJ.mjs')
+    component: () => import('./Analytics-C_PlOHqB.mjs')
   },
   {
     name: "Dashboard-eCommerce",
@@ -1706,7 +1711,7 @@ function authCheck(route) {
     const { checkAuth, authRedirect, auth, roles } = route.meta;
     const authStore = useAuthStore();
     if (auth && (!authStore.isLogged || roles && !authStore.isRoleGranted(roles))) {
-      return "/login";
+      return "/auth/login";
     }
     if (checkAuth && authStore.isLogged && (!roles || authStore.isRoleGranted(roles))) {
       return authRedirect || "/";
