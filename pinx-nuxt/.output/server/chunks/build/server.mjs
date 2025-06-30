@@ -848,36 +848,36 @@ const _routes = [
     name: "Profile",
     path: "/profile",
     meta: __nuxt_page_meta$i || {},
-    component: () => import('./Profile-D4ax3Vg6.mjs')
+    component: () => import('./Profile-C_MboXBw.mjs')
   },
   {
     name: "Reservas",
     path: "/reservas",
-    component: () => import('./Reservas-CdCnn4K3.mjs')
+    component: () => import('./Reservas-DMWMfEou.mjs')
   },
   {
     name: "Apps-Chat",
     path: "/apps/chat",
     meta: __nuxt_page_meta$h || {},
-    component: () => import('./Chat-DhALcBpc.mjs')
+    component: () => import('./Chat-BFHVzI_P.mjs')
   },
   {
     name: "Apps-Notes",
     path: "/apps/notes",
     meta: __nuxt_page_meta$g || {},
-    component: () => import('./Notes-gugsS4hQ.mjs')
+    component: () => import('./Notes-DbeCWZ8K.mjs')
   },
   {
     name: "Login",
     path: "/auth/login",
     meta: __nuxt_page_meta$f || {},
     alias: ["/login"],
-    component: () => import('./Login-BugWnLRd.mjs')
+    component: () => import('./Login-DlRcLz3F.mjs')
   },
   {
     name: "Cards-List",
     path: "/cards/list",
-    component: () => import('./List-HI5mxIJ0.mjs')
+    component: () => import('./List-Cu3hTM7r.mjs')
   },
   {
     name: "Typography",
@@ -902,29 +902,29 @@ const _routes = [
     path: "/cards/basic",
     meta: __nuxt_page_meta$c || {},
     alias: ["/cards"],
-    component: () => import('./Basic-BrQpseLL.mjs')
+    component: () => import('./Basic-RWNl75Xh.mjs')
   },
   {
     name: "Cards-Combo",
     path: "/cards/combo",
-    component: () => import('./Combo-B3LFBEoE.mjs')
+    component: () => import('./Combo-Dj5qrgME.mjs')
   },
   {
     name: "Cards-Extra",
     path: "/cards/extra",
-    component: () => import('./Extra-aDxAPcTf.mjs')
+    component: () => import('./Extra-BMrlJuj8.mjs')
   },
   {
     name: "Propiedades",
     path: "/propiedades",
-    component: () => import('./Propiedades-8UKKSFPN.mjs')
+    component: () => import('./Propiedades-iglLCIA4.mjs')
   },
   {
     name: "Tables-Base",
     path: "/tables/base",
     meta: __nuxt_page_meta$b || {},
     alias: ["/tables"],
-    component: () => import('./Base-Dl_YTheO.mjs')
+    component: () => import('./Base-Cg5hukXo.mjs')
   },
   {
     name: "Tables-Grid",
@@ -935,7 +935,7 @@ const _routes = [
     name: "Apps-Mailbox",
     path: "/apps/mailbox",
     meta: __nuxt_page_meta$a || {},
-    component: () => import('./Mailbox-Ch0m6o-h.mjs')
+    component: () => import('./Mailbox-DkVVFKkp.mjs')
   },
   {
     name: "Maps-Leaflet",
@@ -952,7 +952,7 @@ const _routes = [
     path: "/auth/register",
     meta: __nuxt_page_meta$9 || {},
     alias: ["/register"],
-    component: () => import('./Register-1jSlJWog.mjs')
+    component: () => import('./Register-zc9NTQCw.mjs')
   },
   {
     name: "Editors-Quill",
@@ -969,17 +969,17 @@ const _routes = [
   {
     name: "MultiLanguage",
     path: "/multilanguage",
-    component: () => import('./MultiLanguage-C_eDg63R.mjs')
+    component: () => import('./MultiLanguage-CvikfmNj.mjs')
   },
   {
     name: "Charts-ChartJS",
     path: "/charts/chartjs",
-    component: () => import('./ChartJS-Cchx8kQn.mjs')
+    component: () => import('./ChartJS-BHEMxTIB.mjs')
   },
   {
     name: "Components-Tag",
     path: "/components/tag",
-    component: () => import('./Tag-DyRQ4fnv.mjs')
+    component: () => import('./Tag-CbdTAy52.mjs')
   },
   {
     name: "Editors-Tiptap",
@@ -999,57 +999,57 @@ const _routes = [
   {
     name: "Components-Card",
     path: "/components/card",
-    component: () => import('./Card-Cb463U4Y.mjs')
+    component: () => import('./Card-DVeWrUYw.mjs')
   },
   {
     name: "Components-Form",
     path: "/components/form",
-    component: () => import('./Form-D1wtHlb5.mjs')
+    component: () => import('./Form-iRU6K3r4.mjs')
   },
   {
     name: "Components-Grid",
     path: "/components/grid",
-    component: () => import('./Grid-CRoNwyj6.mjs')
+    component: () => import('./Grid-Bh8Di7Du.mjs')
   },
   {
     name: "Components-Icon",
     path: "/components/icon",
-    component: () => import('./Icon-B0ANh23i.mjs')
+    component: () => import('./Icon-D6Wj-aAf.mjs')
   },
   {
     name: "Components-List",
     path: "/components/list",
-    component: () => import('./List-7NIo6fkQ.mjs')
+    component: () => import('./List-CIPRBJ_O.mjs')
   },
   {
     name: "Components-Menu",
     path: "/components/menu",
-    component: () => import('./Menu-ZhLVBfBZ.mjs')
+    component: () => import('./Menu-CP14393R.mjs')
   },
   {
     name: "Components-Rate",
     path: "/components/rate",
-    component: () => import('./Rate-Cy2ihXrX.mjs')
+    component: () => import('./Rate-DuB_7Sxk.mjs')
   },
   {
     name: "Components-Spin",
     path: "/components/spin",
-    component: () => import('./Spin-BcRvE0kR.mjs')
+    component: () => import('./Spin-Ct3sNhgI.mjs')
   },
   {
     name: "Components-Tabs",
     path: "/components/tabs",
-    component: () => import('./Tabs-BePUwB9B.mjs')
+    component: () => import('./Tabs-Cw48tzkH.mjs')
   },
   {
     name: "Components-Time",
     path: "/components/time",
-    component: () => import('./Time-GQ8v0Mib.mjs')
+    component: () => import('./Time-BFMlcMQy.mjs')
   },
   {
     name: "Components-Tree",
     path: "/components/tree",
-    component: () => import('./Tree-DkKdFVly.mjs')
+    component: () => import('./Tree-Cc2fnLJ0.mjs')
   },
   {
     name: "Maps-GoogleMaps",
@@ -1061,62 +1061,62 @@ const _routes = [
   {
     name: "Components-Affix",
     path: "/components/affix",
-    component: () => import('./Affix-xP1c5_ss.mjs')
+    component: () => import('./Affix-Cvg-gdwk.mjs')
   },
   {
     name: "Components-Alert",
     path: "/components/alert",
-    component: () => import('./Alert-DEKTgEak.mjs')
+    component: () => import('./Alert-BcRdRTtT.mjs')
   },
   {
     name: "Components-Badge",
     path: "/components/badge",
-    component: () => import('./Badge-2DHVgWT4.mjs')
+    component: () => import('./Badge-C0EJ6644.mjs')
   },
   {
     name: "Components-Empty",
     path: "/components/empty",
-    component: () => import('./Empty-jFlqGEkP.mjs')
+    component: () => import('./Empty-BQcQp6I3.mjs')
   },
   {
     name: "Components-Image",
     path: "/components/image",
-    component: () => import('./Image-e8zO2hHs.mjs')
+    component: () => import('./Image-Ckjn3mqA.mjs')
   },
   {
     name: "Components-Input",
     path: "/components/input",
-    component: () => import('./Input-8c0TMvhE.mjs')
+    component: () => import('./Input-DonEGeHF.mjs')
   },
   {
     name: "Components-Modal",
     path: "/components/modal",
-    component: () => import('./Modal-D_GjPXdC.mjs')
+    component: () => import('./Modal-fhXf9yr8.mjs')
   },
   {
     name: "Components-Radio",
     path: "/components/radio",
-    component: () => import('./Radio-BDnB_1oX.mjs')
+    component: () => import('./Radio-D5aKCaof.mjs')
   },
   {
     name: "Components-Space",
     path: "/components/space",
-    component: () => import('./Space-Byk4PvPz.mjs')
+    component: () => import('./Space-BiT27xro.mjs')
   },
   {
     name: "Components-Steps",
     path: "/components/steps",
-    component: () => import('./Steps-Bg9muGTl.mjs')
+    component: () => import('./Steps-jMJfH_YK.mjs')
   },
   {
     name: "Components-Table",
     path: "/components/table",
-    component: () => import('./Table-DzdzGlKS.mjs')
+    component: () => import('./Table-CbBo-jKO.mjs')
   },
   {
     name: "Components-Thing",
     path: "/components/thing",
-    component: () => import('./Thing-Cxmm6LpB.mjs')
+    component: () => import('./Thing-Bk_yIjN_.mjs')
   },
   {
     name: "Editors-Milkdown",
@@ -1133,101 +1133,101 @@ const _routes = [
   {
     name: "Tables-DataTable",
     path: "/tables/datatable",
-    component: () => import('./DataTable-uhI6GbJQ.mjs')
+    component: () => import('./DataTable-Dx9m381w.mjs')
   },
   {
     name: "Charts-ApexCharts",
     path: "/charts/apexcharts",
     meta: __nuxt_page_meta$5 || {},
     alias: ["/charts"],
-    component: () => import('./ApexCharts-vVHLAQem.mjs')
+    component: () => import('./ApexCharts-T8UHV8XF.mjs')
   },
   {
     name: "Components-Anchor",
     path: "/components/anchor",
-    component: () => import('./Anchor-DL59QBf5.mjs')
+    component: () => import('./Anchor-CY6uRm7g.mjs')
   },
   {
     name: "Components-Avatar",
     path: "/components/avatar",
     meta: __nuxt_page_meta$4 || {},
     alias: ["/components"],
-    component: () => import('./Avatar-BgI_wvUE.mjs')
+    component: () => import('./Avatar-DksbqzhU.mjs')
   },
   {
     name: "Components-Button",
     path: "/components/button",
-    component: () => import('./Button-DSGEc3AL.mjs')
+    component: () => import('./Button-CoPjIySU.mjs')
   },
   {
     name: "Components-Dialog",
     path: "/components/dialog",
-    component: () => import('./Dialog-BXUsW-ca.mjs')
+    component: () => import('./Dialog-Dnj5_-WZ.mjs')
   },
   {
     name: "Components-Drawer",
     path: "/components/drawer",
-    component: () => import('./Drawer-DbS6m_9w.mjs')
+    component: () => import('./Drawer-BvV6Vjd1.mjs')
   },
   {
     name: "Components-Layout",
     path: "/components/layout",
-    component: () => import('./Layout-Bz2WDoG2.mjs')
+    component: () => import('./Layout-4IOdpE8P.mjs')
   },
   {
     name: "Components-Result",
     path: "/components/result",
-    component: () => import('./Result-eBVeMIBw.mjs')
+    component: () => import('./Result-BW0UIKA9.mjs')
   },
   {
     name: "Components-Select",
     path: "/components/select",
-    component: () => import('./Select-70uHCkb7.mjs')
+    component: () => import('./Select-CnUVSnY8.mjs')
   },
   {
     name: "Components-Slider",
     path: "/components/slider",
-    component: () => import('./Slider-COQT4J_v.mjs')
+    component: () => import('./Slider-Dh4zcZzL.mjs')
   },
   {
     name: "Components-Switch",
     path: "/components/switch",
-    component: () => import('./Switch-CjO8lL9Y.mjs')
+    component: () => import('./Switch-Bh5vdcN-.mjs')
   },
   {
     name: "Components-Upload",
     path: "/components/upload",
-    component: () => import('./Upload-CXwMwqY-.mjs')
+    component: () => import('./Upload-CmeR1iyt.mjs')
   },
   {
     name: "Components-BackTop",
     path: "/components/backtop",
-    component: () => import('./BackTop-CIDpYhNE.mjs')
+    component: () => import('./BackTop-DfEIeNhg.mjs')
   },
   {
     name: "Components-Divider",
     path: "/components/divider",
-    component: () => import('./Divider-DAbuRnjR.mjs')
+    component: () => import('./Divider-_pZKMf_K.mjs')
   },
   {
     name: "Components-Mention",
     path: "/components/mention",
-    component: () => import('./Mention-Lj9hHEEi.mjs')
+    component: () => import('./Mention-C77DZ2At.mjs')
   },
   {
     name: "Components-Message",
     path: "/components/message",
-    component: () => import('./Message-4hBzy4ji.mjs')
+    component: () => import('./Message-D0Rzv7AK.mjs')
   },
   {
     name: "Components-Popover",
     path: "/components/popover",
-    component: () => import('./Popover-CIH7gYd1.mjs')
+    component: () => import('./Popover-PeZqsgiQ.mjs')
   },
   {
     name: "Components-Tooltip",
     path: "/components/tooltip",
-    component: () => import('./Tooltip-Bx6UBl4e.mjs')
+    component: () => import('./Tooltip-BT0T6_Ic.mjs')
   },
   {
     name: "Layout-LeftSidebar",
@@ -1239,74 +1239,74 @@ const _routes = [
     path: "/auth/forgotpassword",
     meta: __nuxt_page_meta$3 || {},
     alias: ["/forgot-password"],
-    component: () => import('./ForgotPassword-CbUbk15c.mjs')
+    component: () => import('./ForgotPassword-BwmZI2tD.mjs')
   },
   {
     name: "Components-Calendar",
     path: "/components/calendar",
-    component: () => import('./Calendar-B_kJxIDA.mjs')
+    component: () => import('./Calendar-BUnv2MRN.mjs')
   },
   {
     name: "Components-Carousel",
     path: "/components/carousel",
-    component: () => import('./Carousel-B0k_qwJZ.mjs')
+    component: () => import('./Carousel-BSpi9jJO.mjs')
   },
   {
     name: "Components-Cascader",
     path: "/components/cascader",
-    component: () => import('./Cascader-vYSwLjZ_.mjs')
+    component: () => import('./Cascader-BHqIkC8t.mjs')
   },
   {
     name: "Components-Checkbox",
     path: "/components/checkbox",
-    component: () => import('./Checkbox-CBd4qiPG.mjs')
+    component: () => import('./Checkbox-vLkYazdT.mjs')
   },
   {
     name: "Components-Collapse",
     path: "/components/collapse",
-    component: () => import('./Collapse-TB_dshR5.mjs')
+    component: () => import('./Collapse-nelA9aEH.mjs')
   },
   {
     name: "Components-Dropdown",
     path: "/components/dropdown",
-    component: () => import('./Dropdown-CdOLqDbd.mjs')
+    component: () => import('./Dropdown-DbqZCsPD.mjs')
   },
   {
     name: "Components-Ellipsis",
     path: "/components/ellipsis",
-    component: () => import('./Ellipsis-wGWot9hG.mjs')
+    component: () => import('./Ellipsis-DkOYvspQ.mjs')
   },
   {
     name: "Components-Progress",
     path: "/components/progress",
-    component: () => import('./Progress-D2bhY-6p.mjs')
+    component: () => import('./Progress-BfmRMvis.mjs')
   },
   {
     name: "Components-Skeleton",
     path: "/components/skeleton",
-    component: () => import('./Skeleton-BdW5sfIz.mjs')
+    component: () => import('./Skeleton-DM_32b-N.mjs')
   },
   {
     name: "Components-Timeline",
     path: "/components/timeline",
-    component: () => import('./Timeline-CRhogg4b.mjs')
+    component: () => import('./Timeline-BkRGN5CS.mjs')
   },
   {
     name: "Components-Transfer",
     path: "/components/transfer",
-    component: () => import('./Transfer-DkZZv91f.mjs')
+    component: () => import('./Transfer-y2XCvrpO.mjs')
   },
   {
     name: "Dashboard-Analytics",
     path: "/dashboard/analytics",
     meta: __nuxt_page_meta$2 || {},
     alias: ["/", "/dashboard"],
-    component: () => import('./Analytics-B1KTfzHW.mjs')
+    component: () => import('./Analytics-tELy6gdJ.mjs')
   },
   {
     name: "Dashboard-eCommerce",
     path: "/dashboard/ecommerce",
-    component: () => import('./eCommerce-jhb-PqkH.mjs')
+    component: () => import('./eCommerce-DzWxxOHL.mjs')
   },
   {
     name: "Layout-RightSidebar",
@@ -1323,134 +1323,134 @@ const _routes = [
   {
     name: "Components-Countdown",
     path: "/components/countdown",
-    component: () => import('./Countdown-ByB3tSlQ.mjs')
+    component: () => import('./Countdown-DNPB6eac.mjs')
   },
   {
     name: "Components-DataTable",
     path: "/components/datatable",
-    component: () => import('./DataTable-BWoegJM1.mjs')
+    component: () => import('./DataTable-Cu7kf9Ry.mjs')
   },
   {
     name: "Components-Popselect",
     path: "/components/popselect",
-    component: () => import('./Popselect-siwwutZb.mjs')
+    component: () => import('./Popselect-DibvDDJu.mjs')
   },
   {
     name: "Components-Scrollbar",
     path: "/components/scrollbar",
-    component: () => import('./Scrollbar-D_WdcEXl.mjs')
+    component: () => import('./Scrollbar-DsRzQ1DS.mjs')
   },
   {
     name: "Components-Statistic",
     path: "/components/statistic",
-    component: () => import('./Statistic-CnJRIx51.mjs')
+    component: () => import('./Statistic-QDmuKzB5.mjs')
   },
   {
     name: "Components-Watermark",
     path: "/components/watermark",
-    component: () => import('./Watermark-Ch3IIVL2.mjs')
+    component: () => import('./Watermark-DrphzTOy.mjs')
   },
   {
     name: "Apps-Calendars-VueCal",
     path: "/apps/calendars/vuecal",
-    component: () => import('./VueCal-CDb7-PYc.mjs')
+    component: () => import('./VueCal-C1D3ILHk.mjs')
   },
   {
     name: "Components-Breadcrumb",
     path: "/components/breadcrumb",
-    component: () => import('./Breadcrumb-DK9MQTLQ.mjs')
+    component: () => import('./Breadcrumb-DCJB-wvT.mjs')
   },
   {
     name: "Components-DatePicker",
     path: "/components/datepicker",
-    component: () => import('./DatePicker-BUD2iH3s.mjs')
+    component: () => import('./DatePicker-op-ml6DP.mjs')
   },
   {
     name: "Components-LegacyGrid",
     path: "/components/legacygrid",
-    component: () => import('./LegacyGrid-Btrnbfld.mjs')
+    component: () => import('./LegacyGrid-B1IVv1dl.mjs')
   },
   {
     name: "Components-PageHeader",
     path: "/components/pageheader",
-    component: () => import('./PageHeader-BvjbOxWI.mjs')
+    component: () => import('./PageHeader-Dkoh5Xv3.mjs')
   },
   {
     name: "Components-Pagination",
     path: "/components/pagination",
-    component: () => import('./Pagination-B0j_vZoe.mjs')
+    component: () => import('./Pagination-DNj8pMuT.mjs')
   },
   {
     name: "Components-Popconfirm",
     path: "/components/popconfirm",
-    component: () => import('./Popconfirm-l4LL0tel.mjs')
+    component: () => import('./Popconfirm-BY2i3xQ5.mjs')
   },
   {
     name: "Components-TimePicker",
     path: "/components/timepicker",
-    component: () => import('./TimePicker-CD3s1qar.mjs')
+    component: () => import('./TimePicker-LgAHh523.mjs')
   },
   {
     name: "Components-TreeSelect",
     path: "/components/treeselect",
-    component: () => import('./TreeSelect-CRcGEm13.mjs')
+    component: () => import('./TreeSelect-CMRS43yI.mjs')
   },
   {
     name: "Components-Typography",
     path: "/components/typography",
-    component: () => import('./Typography-OKDhFgEo.mjs')
+    component: () => import('./Typography-BlsPZvKf.mjs')
   },
   {
     name: "Components-ColorPicker",
     path: "/components/colorpicker",
-    component: () => import('./ColorPicker-DyJf3XBg.mjs')
+    component: () => import('./ColorPicker-DmYNrNcT.mjs')
   },
   {
     name: "Components-DynamicTags",
     path: "/components/dynamictags",
-    component: () => import('./DynamicTags-D0dFG_7G.mjs')
+    component: () => import('./DynamicTags-B6HMbzEs.mjs')
   },
   {
     name: "Components-InputNumber",
     path: "/components/inputnumber",
-    component: () => import('./InputNumber-y02fbjxs.mjs')
+    component: () => import('./InputNumber-BnkvQphF.mjs')
   },
   {
     name: "Components-AutoComplete",
     path: "/components/autocomplete",
-    component: () => import('./AutoComplete-CCXAx94u.mjs')
+    component: () => import('./AutoComplete-CLeFL7Ff.mjs')
   },
   {
     name: "Components-Descriptions",
     path: "/components/descriptions",
-    component: () => import('./Descriptions-BnYP8sb2.mjs')
+    component: () => import('./Descriptions-D9sf9ZES.mjs')
   },
   {
     name: "Components-DynamicInput",
     path: "/components/dynamicinput",
-    component: () => import('./DynamicInput-CxL-HDv3.mjs')
+    component: () => import('./DynamicInput-CQZ9jZev.mjs')
   },
   {
     name: "Components-GradientText",
     path: "/components/gradienttext",
-    component: () => import('./GradientText-BVWzTZEP.mjs')
+    component: () => import('./GradientText-7XLHJfaF.mjs')
   },
   {
     name: "Components-Notification",
     path: "/components/notification",
-    component: () => import('./Notification-CoWfjucM.mjs')
+    component: () => import('./Notification-DAibkIdd.mjs')
   },
   {
     name: "Components-NumberAnimation",
     path: "/components/numberanimation",
-    component: () => import('./NumberAnimation-CPBmxvZD.mjs')
+    component: () => import('./NumberAnimation-Cq4R_4oP.mjs')
   },
   {
     name: "Apps-Calendars-FullCalendar",
     path: "/apps/calendars/fullcalendar",
     meta: __nuxt_page_meta || {},
     alias: ["/apps", "/apps/calendars"],
-    component: () => import('./FullCalendar-D3Md53Xb.mjs')
+    component: () => import('./FullCalendar-W3yrJEq0.mjs')
   },
   {
     name: "Tables-grid-assets-dataGenerate",
@@ -1465,17 +1465,17 @@ const _routes = [
   {
     name: "Tables-data-tables-components-Basic",
     path: "/tables/data-tables-components/basic",
-    component: () => import('./Basic-0mOkbspe.mjs')
+    component: () => import('./Basic-CwXeBov1.mjs')
   },
   {
     name: "Tables-data-tables-components-Empty",
     path: "/tables/data-tables-components/empty",
-    component: () => import('./Empty-BfFuNXkH.mjs')
+    component: () => import('./Empty-7lgVcmGY.mjs')
   },
   {
     name: "Tables-data-tables-components-Merge",
     path: "/tables/data-tables-components/merge",
-    component: () => import('./Merge-38Q5GGm2.mjs')
+    component: () => import('./Merge-B9nxLUWG.mjs')
   },
   {
     name: "Tables-grid-assets-plugin-date",
@@ -1485,12 +1485,12 @@ const _routes = [
   {
     name: "Tables-data-tables-components-Expand",
     path: "/tables/data-tables-components/expand",
-    component: () => import('./Expand-BR8KQ8_x.mjs')
+    component: () => import('./Expand-5QnL_0PI.mjs')
   },
   {
     name: "Tables-data-tables-components-Sorting",
     path: "/tables/data-tables-components/sorting",
-    component: () => import('./Sorting-Bf45aggo.mjs')
+    component: () => import('./Sorting-DIOeDy4J.mjs')
   },
   {
     name: "Tables-grid-assets-plugin-select",
@@ -1500,47 +1500,47 @@ const _routes = [
   {
     name: "Components-data-table-components-Basic",
     path: "/components/data-table-components/basic",
-    component: () => import('./Basic-DP8_1j-0.mjs')
+    component: () => import('./Basic-BviI2CDk.mjs')
   },
   {
     name: "Components-data-table-components-Merge",
     path: "/components/data-table-components/merge",
-    component: () => import('./Merge-ksFL93Bz.mjs')
+    component: () => import('./Merge-B_BcuHv1.mjs')
   },
   {
     name: "Tables-data-tables-components-Editable",
     path: "/tables/data-tables-components/editable",
-    component: () => import('./Editable-tdZXnCNK.mjs')
+    component: () => import('./Editable-CrUqI4BC.mjs')
   },
   {
     name: "Tables-data-tables-components-Draggable",
     path: "/tables/data-tables-components/draggable",
-    component: () => import('./Draggable-CcTLafmu.mjs')
+    component: () => import('./Draggable-DKVdxkS6.mjs')
   },
   {
     name: "Tables-data-tables-components-LargeData",
     path: "/tables/data-tables-components/largedata",
-    component: () => import('./LargeData-CT490biW.mjs')
+    component: () => import('./LargeData-BXt3ouOt.mjs')
   },
   {
     name: "Tables-data-tables-components-Selection",
     path: "/tables/data-tables-components/selection",
-    component: () => import('./Selection-DSAN6Dex.mjs')
+    component: () => import('./Selection-CibLk66v.mjs')
   },
   {
     name: "Components-data-table-components-Sorting",
     path: "/components/data-table-components/sorting",
-    component: () => import('./Sorting-CUfGx3ng.mjs')
+    component: () => import('./Sorting-DqVJvP9k.mjs')
   },
   {
     name: "Components-data-table-components-Draggable",
     path: "/components/data-table-components/draggable",
-    component: () => import('./Draggable-BPf3ourM.mjs')
+    component: () => import('./Draggable-DrXmqgp6.mjs')
   },
   {
     name: "Components-data-table-components-Selection",
     path: "/components/data-table-components/selection",
-    component: () => import('./Selection-CXvIb5gn.mjs')
+    component: () => import('./Selection-DagiWhOx.mjs')
   }
 ];
 const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
@@ -35200,5 +35200,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { typographyLight as $, tabsLight as A, Button as B, call as C, replaceable as D, fadeInHeightExpandTransition as E, iconSwitchTransition as F, NFadeInExpandTransition as G, error as H, NIconSwitchTransition as I, warn as J, resolveSlot as K, useFormItem as L, uploadLight as M, NCard as N, dialogApiInjectionKey as O, formLight as P, keysOf as Q, commonVariables$n as R, formatLength as S, formItemInjectionKey as T, resolveSlotWithTypedProps as U, VResizeObserver as V, Scrollbar$1 as W, useLocale as X, useRtl as Y, inputLight as Z, _sfc_main$o as _, _export_sfc as a, skeletonLight as a$, useStyle as a0, NBaseLoading as a1, fadeInTransition as a2, fadeInScaleUpTransition as a3, LazyTeleport as a4, imageLight as a5, InfoIcon as a6, WarningIcon as a7, ErrorIcon as a8, SuccessIcon as a9, popoverBaseProps as aA, checkboxLight as aB, ellipsisLight as aC, Wrapper as aD, NTag as aE, VOverflow as aF, getTitleAttribute as aG, internalSelectionLight as aH, internalSelectionMenuInjectionKey as aI, internalSelectMenuLight as aJ, internalSelectionMenuBodyInjectionKey as aK, radioLight as aL, useThemeStore as aM, renderIcon as aN, themeLight as aO, toDate as aP, getDefaultOptions as aQ, enUS as aR, startOfWeek as aS, useAuthStore as aT, collapseTransitionLight as aU, useMessage as aV, NDivider as aW, Logo as aX, NSpin as aY, __nuxt_component_0 as aZ, isMobile as a_, progressLight as aa, Scrollbar as ab, useMergedClsPrefix as ac, ChevronRightIcon as ad, NPopover as ae, NDropdown as af, configProviderInjectionKey as ag, cssrAnchorMetaName as ah, NEmpty as ai, insideModal as aj, insidePopover as ak, dataTableLight as al, spaceLight as am, paginationLight as an, useAdjustedTo as ao, NConfigProvider as ap, collapseLight as aq, resolveWrappedSlotWithProps as ar, Binder as as, VTarget as at, VFollower as au, selectLight as av, markEventEffectPerformed as aw, popselectLight as ax, keep as ay, createRefSetter as az, NModal as b, avatarGroupInjectionKey as b0, avatarGroupLight as b1, carouselLight as b2, timelineLight as b3, tableLight as b4, NMenu as b5, getFirstSlotVNodeWithTypedProps as b6, autoCompleteLight as b7, style$f as b8, buttonGroupInjectionKey as b9, NResult as bA, sliderLight as bB, lockHtmlScrollRightCompensationRef as bC, backTopLight as bD, mentionLight as bE, calendarLight as bF, elementLight as bG, transferLight$1 as bH, useMainStore as bI, statisticLight as bJ, watermarkLight as bK, breadcrumbLight as bL, pageHeaderLight as bM, popconfirmLight as bN, treeSelectLight as bO, colorPickerLight as bP, dynamicTagsLight as bQ, commonProps as bR, descriptionsLight as bS, dynamicInputLight as bT, gradientTextLight as bU, logo as bV, useLocalesStore as ba, useI18n as bb, alertLight as bc, color2Class as bd, themeLight$4 as be, listLight as bf, thingLight as bg, layoutLight as bh, positionProp as bi, layoutSiderInjectionKey as bj, isSlotEmpty as bk, switchLight as bl, XScrollbar as bm, treeLight as bn, NBadge as bo, XButton as bp, inputNumberLight as bq, cascaderLight as br, datePickerLight as bs, timePickerLight as bt, isSameWeek as bu, stepsLight as bv, ErrorIcon$1 as bw, anchorLight as bx, NDrawer as by, NDrawerContent as bz, NText as c, NAvatar as d, entry$1 as default, NTooltip as e, c as f, cssrAnchorMetaName$1 as g, createInjectionKey as h, NBaseIcon as i, NBaseClose as j, cB as k, cM as l, c$1 as m, cE as n, omit as o, cNotM as p, flatten as q, render as r, resolveWrappedSlot as s, throwError as t, useNotification as u, useConfig as v, warnOnce as w, useTheme as x, createKey as y, useThemeClass as z };
+export { typographyLight as $, tabsLight as A, Button as B, call as C, replaceable as D, fadeInHeightExpandTransition as E, iconSwitchTransition as F, NFadeInExpandTransition as G, error as H, NIconSwitchTransition as I, warn as J, resolveSlot as K, useFormItem as L, uploadLight as M, NCard as N, dialogApiInjectionKey as O, formLight as P, keysOf as Q, commonVariables$n as R, formatLength as S, formItemInjectionKey as T, resolveSlotWithTypedProps as U, VResizeObserver as V, Scrollbar$1 as W, useLocale as X, useRtl as Y, inputLight as Z, _sfc_main$o as _, _export_sfc as a, skeletonLight as a$, useStyle as a0, NBaseLoading as a1, fadeInTransition as a2, fadeInScaleUpTransition as a3, LazyTeleport as a4, imageLight as a5, InfoIcon as a6, WarningIcon as a7, ErrorIcon as a8, SuccessIcon as a9, popoverBaseProps as aA, checkboxLight as aB, ellipsisLight as aC, Wrapper as aD, NTag as aE, VOverflow as aF, getTitleAttribute as aG, internalSelectionLight as aH, internalSelectionMenuInjectionKey as aI, internalSelectMenuLight as aJ, internalSelectionMenuBodyInjectionKey as aK, radioLight as aL, useThemeStore as aM, renderIcon as aN, themeLight as aO, toDate as aP, getDefaultOptions as aQ, enUS as aR, startOfWeek as aS, useAuthStore as aT, collapseTransitionLight as aU, useMessage as aV, NDivider as aW, Logo as aX, NSpin as aY, __nuxt_component_0 as aZ, isMobile as a_, progressLight as aa, Scrollbar as ab, spaceLight as ac, useMergedClsPrefix as ad, ChevronRightIcon as ae, NPopover as af, NDropdown as ag, configProviderInjectionKey as ah, cssrAnchorMetaName as ai, NEmpty as aj, insideModal as ak, insidePopover as al, dataTableLight as am, paginationLight as an, useAdjustedTo as ao, NConfigProvider as ap, collapseLight as aq, resolveWrappedSlotWithProps as ar, Binder as as, VTarget as at, VFollower as au, selectLight as av, markEventEffectPerformed as aw, popselectLight as ax, keep as ay, createRefSetter as az, NModal as b, avatarGroupInjectionKey as b0, avatarGroupLight as b1, carouselLight as b2, timelineLight as b3, tableLight as b4, NMenu as b5, getFirstSlotVNodeWithTypedProps as b6, autoCompleteLight as b7, style$f as b8, buttonGroupInjectionKey as b9, NResult as bA, sliderLight as bB, lockHtmlScrollRightCompensationRef as bC, backTopLight as bD, mentionLight as bE, calendarLight as bF, elementLight as bG, transferLight$1 as bH, useMainStore as bI, statisticLight as bJ, watermarkLight as bK, breadcrumbLight as bL, pageHeaderLight as bM, popconfirmLight as bN, treeSelectLight as bO, colorPickerLight as bP, dynamicTagsLight as bQ, commonProps as bR, descriptionsLight as bS, dynamicInputLight as bT, gradientTextLight as bU, logo as bV, useLocalesStore as ba, useI18n as bb, alertLight as bc, color2Class as bd, themeLight$4 as be, listLight as bf, thingLight as bg, layoutLight as bh, positionProp as bi, layoutSiderInjectionKey as bj, isSlotEmpty as bk, switchLight as bl, XScrollbar as bm, treeLight as bn, NBadge as bo, XButton as bp, inputNumberLight as bq, cascaderLight as br, datePickerLight as bs, timePickerLight as bt, isSameWeek as bu, stepsLight as bv, ErrorIcon$1 as bw, anchorLight as bx, NDrawer as by, NDrawerContent as bz, NText as c, NAvatar as d, entry$1 as default, NTooltip as e, c as f, cssrAnchorMetaName$1 as g, createInjectionKey as h, NBaseIcon as i, NBaseClose as j, cB as k, cM as l, c$1 as m, cE as n, omit as o, cNotM as p, flatten as q, render as r, resolveWrappedSlot as s, throwError as t, useNotification as u, useConfig as v, warnOnce as w, useTheme as x, createKey as y, useThemeClass as z };
 //# sourceMappingURL=server.mjs.map
