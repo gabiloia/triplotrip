@@ -1450,7 +1450,7 @@ const _routes = [
     path: "/apps/calendars/fullcalendar",
     meta: __nuxt_page_meta || {},
     alias: ["/apps", "/apps/calendars"],
-    component: () => import('./FullCalendar-W3yrJEq0.mjs')
+    component: () => import('./FullCalendar-Dh-GPTr5.mjs')
   },
   {
     name: "Tables-grid-assets-dataGenerate",

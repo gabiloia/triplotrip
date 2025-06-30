@@ -1,0 +1,1 @@
+import{y as t,cq as a,a1 as i,aj as o}from"./BF1SYJr_.js";function f(r,n){n&&(t(()=>{const{value:e}=r;e&&a.registerHandler(e,n)}),i(r,(e,s)=>{s&&a.unregisterHandler(s)},{deep:!1}),o(()=>{const{value:e}=r;e&&a.unregisterHandler(e)}))}export{f as u};
