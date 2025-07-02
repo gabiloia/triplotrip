@@ -738,8 +738,8 @@ function toArray$1(value) {
 const __nuxt_page_meta$j = { auth: true, roles: "all" };
 const __nuxt_page_meta$i = {
   alias: ["/", "/reservas"],
-  auth: true,
-  roles: "all"
+  auth: true
+  // roles: "all" // Remover esta línea
 };
 const __nuxt_page_meta$h = {
   auth: true,
@@ -839,8 +839,7 @@ const __nuxt_page_meta$1 = {
 };
 const __nuxt_page_meta = {
   alias: ["/apps", "/apps/calendars"],
-  auth: true,
-  roles: "all"
+  auth: true
 };
 const _routes = [
   {
@@ -859,7 +858,7 @@ const _routes = [
     path: "/reservas",
     meta: __nuxt_page_meta$i || {},
     alias: ["/", "/reservas"],
-    component: () => import('./Reservas-CN-uUvXz.mjs')
+    component: () => import('./Reservas-CPmn9MQF.mjs')
   },
   {
     name: "Apps-Chat",
@@ -1455,7 +1454,7 @@ const _routes = [
     path: "/apps/calendars/fullcalendar",
     meta: __nuxt_page_meta || {},
     alias: ["/apps", "/apps/calendars"],
-    component: () => import('./FullCalendar-Dh-GPTr5.mjs')
+    component: () => import('./FullCalendar-Bds1a40g.mjs')
   },
   {
     name: "Tables-grid-assets-dataGenerate",
@@ -1663,8 +1662,10 @@ const validate = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to, from) => {
 });
 const useAuthStore = defineStore("auth", {
   state: () => ({
-    logged: true,
-    role: "admin",
+    logged: false,
+    // ← CAMBIADO A FALSE
+    role: null,
+    // ← CAMBIADO A NULL
     user: {}
   }),
   actions: {
@@ -1706,29 +1707,8 @@ const useAuthStore = defineStore("auth", {
     omit: ["user"]
   }
 });
-function authCheck(route) {
-  try {
-    const { checkAuth, authRedirect, auth, roles } = route.meta;
-    const authStore = useAuthStore();
-    if (auth && (!authStore.isLogged || roles && !authStore.isRoleGranted(roles))) {
-      return "/auth/login";
-    }
-    if (checkAuth && authStore.isLogged && (!roles || authStore.isRoleGranted(roles))) {
-      return authRedirect || "/";
-    }
-    return null;
-  } catch (err) {
-    return null;
-  }
-}
 const auth_45global = /* @__PURE__ */ defineNuxtRouteMiddleware((to) => {
-  try {
-    const redirect = authCheck(to);
-    if (redirect) {
-      return navigateTo(redirect);
-    }
-  } catch (err) {
-  }
+  return;
 });
 const route_45global = /* @__PURE__ */ defineNuxtRouteMiddleware(() => {
 });
