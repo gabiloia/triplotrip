@@ -1,0 +1,8 @@
+const CardCombo6_vue_vue_type_style_index_0_scoped_a3d0809c_lang = ".card-wrap[data-v-a3d0809c]{height:100%;overflow:hidden;width:100%}.card-wrap .item-box[data-v-a3d0809c]{width:calc(50% - 11px)}.card-wrap .item-box .header[data-v-a3d0809c]{margin-bottom:14px}.card-wrap .item-box .info .value[data-v-a3d0809c]{font-family:var(--font-family-display);font-size:26px;font-weight:700}.card-wrap .item-box.item-right[data-v-a3d0809c]{text-align:right}.card-wrap .divider[data-v-a3d0809c]{align-items:center;display:flex;flex-direction:column;justify-content:center;width:22px}.card-wrap .divider .line[data-v-a3d0809c]{background-color:var(--border-color);flex-grow:1;width:1px}.card-wrap .divider .text[data-v-a3d0809c]{background-color:var(--extra2-color);border-radius:22px;color:#fff;font-size:10px;font-weight:700;height:22px;letter-spacing:.4px;line-height:23px;text-align:center;text-transform:uppercase;width:22px}.direction-rtl .card-wrap .item-right .title[data-v-a3d0809c]{text-align:left}";
+
+const CardCombo6Styles_bvFXTwTI = [
+  CardCombo6_vue_vue_type_style_index_0_scoped_a3d0809c_lang
+];
+
+export { CardCombo6Styles_bvFXTwTI as default };
+//# sourceMappingURL=CardCombo6-styles.bvFXTwTI.mjs.map

@@ -1,4 +1,0 @@
-const CardExtra5_vue_vue_type_style_index_0_scoped_1e963bdb_lang = ".n-card[data-v-1e963bdb] .n-card__content{display:flex;flex-direction:column}.n-card .list-wrap[data-v-1e963bdb]{flex-grow:1;height:100%;max-height:800px;overflow:hidden}.n-card .list-wrap.whole-height[data-v-1e963bdb]{max-height:none}.n-card .list-wrap .scrollbar-wrapper[data-v-1e963bdb]{min-height:100px}";
-
-export { CardExtra5_vue_vue_type_style_index_0_scoped_1e963bdb_lang as C };
-//# sourceMappingURL=CardExtra5-styles-1.mjs-CiEHN3e4.mjs.map

@@ -1,0 +1,1 @@
+import{y as t,cr as a,a2 as i,ak as o}from"./BboPWEKj.js";function f(r,n){n&&(t(()=>{const{value:e}=r;e&&a.registerHandler(e,n)}),i(r,(e,s)=>{s&&a.unregisterHandler(s)},{deep:!1}),o(()=>{const{value:e}=r;e&&a.unregisterHandler(e)}))}export{f as u};

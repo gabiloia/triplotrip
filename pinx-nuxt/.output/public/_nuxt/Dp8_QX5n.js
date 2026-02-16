@@ -1,0 +1,1 @@
+import{d as s,o as t,c as a,a as o,f as d}from"./BboPWEKj.js";const c={class:"page"},l=s({__name:"FullWidth",setup(n){return(r,e)=>(t(),a("div",c,[...e[0]||(e[0]=[o("div",{class:"spacer"},"Full Width",-1)])]))}}),p=d(l,[["__scopeId","data-v-6edb5d11"]]);export{p as default};
