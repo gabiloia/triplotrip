@@ -58,7 +58,6 @@ import Provider from "@/app-layouts/common/Provider.vue"
 import SplashScreen from "@/app-layouts/common/SplashScreen.vue"
 import HorizontalNav from "@/app-layouts/HorizontalNav"
 import VerticalNav from "@/app-layouts/VerticalNav"
-
 import SearchDialog from "@/components/common/SearchDialog.vue"
 import { useAuthStore } from "@/stores/auth"
 import { useLocalesStore } from "@/stores/i18n"

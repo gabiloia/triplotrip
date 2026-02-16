@@ -1,27 +1,11 @@
 <template>
 	<div class="settings flex items-center justify-between">
 		<div class="layout">
-			<n-button quaternary circle @click="align = 'left'">
-				<template #icon>
-					<Icon>
-						<Iconify v-if="align === 'left'" :icon="AlignLeftActive" />
-						<Iconify v-else :icon="AlignLeft" />
-					</Icon>
-				</template>
-			</n-button>
 			<n-button quaternary circle @click="align = 'center'">
 				<template #icon>
 					<Icon>
 						<Iconify v-if="align === 'center'" :icon="AlignCenterActive" />
 						<Iconify v-else :icon="AlignCenter" />
-					</Icon>
-				</template>
-			</n-button>
-			<n-button quaternary circle @click="align = 'right'">
-				<template #icon>
-					<Icon>
-						<Iconify v-if="align === 'right'" :icon="AlignRightActive" />
-						<Iconify v-else :icon="AlignRight" />
 					</Icon>
 				</template>
 			</n-button>
@@ -54,17 +38,13 @@ import { Icon as Iconify } from "@iconify/vue"
 import { NButton } from "naive-ui"
 import { computed, onBeforeMount } from "vue"
 
-export type Align = "left" | "center" | "right"
+export type Align = "center"
 
 const align = defineModel<Align>("align", { default: "left" })
 const activeColor = defineModel<string>("activeColor", { default: "" })
 
-const AlignLeft = "fluent:textbox-align-bottom-rotate-90-24-regular"
 const AlignCenter = "fluent:textbox-align-middle-rotate-90-24-regular"
-const AlignRight = "fluent:textbox-align-top-rotate-90-24-regular"
-const AlignLeftActive = "fluent:textbox-align-bottom-rotate-90-24-filled"
 const AlignCenterActive = "fluent:textbox-align-middle-rotate-90-24-filled"
-const AlignRightActive = "fluent:textbox-align-top-rotate-90-24-filled"
 const Square = "fluent:square-24-filled"
 const SquareActive = "fluent:checkbox-indeterminate-24-regular"
 

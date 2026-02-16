@@ -19,7 +19,7 @@ import { NScrollbar } from "naive-ui"
 import { computed, onMounted, ref } from "vue"
 import { useRoute, useRouter } from "vue-router"
 
-
+const themeStore = useThemeStore()
 const router = useRouter()
 const route = useRoute()
 const themeBoxed = computed<boolean>(() => themeStore.isBoxed)

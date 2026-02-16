@@ -2,12 +2,10 @@ import type { Role, Roles } from "@/types/auth.d"
 import _castArray from "lodash/castArray"
 import { acceptHMRUpdate, defineStore } from "pinia"
 
-// HERE YOU CAN IMPLEMENT YOUR LOGIN
-
 export const useAuthStore = defineStore("auth", {
 	state: () => ({
-		logged: true,
-		role: "admin" as Role | null,
+		logged: false, // ← CAMBIADO A FALSE
+		role: null as Role | null, // ← CAMBIADO A NULL
 		user: {}
 	}),
 	actions: {

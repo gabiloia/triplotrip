@@ -3,8 +3,8 @@
 		<div class="wrap flex items-center justify-end gap-3">
 			<div class="copy">
 				By
-				<a href="https://juniche" target="_blank" alt="D*VERSE" rel="noopener noreferrer" class="mx-1">
-					Juniche
+				<a href="https://juniche.com/" target="_blank" alt="JUNICHE" rel="noopener noreferrer" class="mx-1">
+					JUNICHE
 				</a>
 				All rights Reserved © Copyright {{ year }}
 			</div>
@@ -13,6 +13,7 @@
 </template>
 
 <script lang="ts" setup>
+import Icon from "@/components/common/Icon.vue"
 import { ref } from "vue"
 
 const { boxed } = defineProps<{

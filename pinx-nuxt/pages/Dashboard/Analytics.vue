@@ -9,66 +9,6 @@
 						<CardCombo3 class="h-full" />
 					</div>
 
-					<!-- four cards -->
-					<div class="four-cards-wrap gap-5">
-						<CardCombo4
-							title="Users"
-							val-string="248.3K"
-							percentage
-							card-wrap
-							icon-box
-							:percentage-props="{
-								value: 2.45,
-								direction: 'up'
-							}"
-						>
-							<template #icon>
-								<CardComboIcon :icon-name="UsersIcon" boxed />
-							</template>
-						</CardCombo4>
-						<CardCombo4
-							title="Page Views"
-							val-string="486.9K"
-							percentage
-							card-wrap
-							:percentage-props="{
-								value: 1.88,
-								direction: 'down'
-							}"
-						>
-							<template #icon>
-								<CardComboIcon :icon-name="ViewsIcon" boxed />
-							</template>
-						</CardCombo4>
-						<CardCombo4
-							title="Active Users"
-							val-string="73.8K"
-							percentage
-							card-wrap
-							:percentage-props="{
-								value: 3.24,
-								direction: 'up'
-							}"
-						>
-							<template #icon>
-								<CardComboIcon :icon-name="ActivityIcon" boxed />
-							</template>
-						</CardCombo4>
-						<CardCombo4
-							title="Uploads"
-							val-string="42.1K"
-							percentage
-							card-wrap
-							:percentage-props="{
-								value: 0.43,
-								direction: 'down'
-							}"
-						>
-							<template #icon>
-								<CardComboIcon :icon-name="UploadsIcon" boxed />
-							</template>
-						</CardCombo4>
-					</div>
 
 					<!-- list -->
 					<div class="flex grow">
@@ -78,7 +18,7 @@
 								:is-expand="isExpand"
 								:reload="reload"
 								class="h-full"
-								title="Leading Companies"
+								title="Ingresos"
 								:segmented="{
 									content: true,
 									footer: true
@@ -107,46 +47,14 @@
 				<div class="flex h-full flex-col gap-5">
 					<!-- tiny chart -->
 					<div class="flex">
-						<CardCombo1 title="Sessions" class="bg-extra-1! h-full text-white!" chart-color="#ffffff">
+						<CardCombo1 title="Ventas por día" class="bg-extra-1! h-full text-white!" chart-color="#ffffff">
 							<template #icon>
 								<CardComboIcon :icon-name="SessionsIcon" boxed color="white" />
 							</template>
 						</CardCombo1>
 					</div>
 
-					<!-- two cards -->
-					<div class="flex gap-5">
-						<CardCombo2 title="Reports" centered class="basis-1/2">
-							<template #icon>
-								<CardComboIcon
-									:icon-name="ReportsIcon"
-									boxed
-									:box-size="50"
-									:color="style['extra3-color']"
-								/>
-							</template>
-						</CardCombo2>
-						<CardCombo2 title="Issues" centered class="basis-1/2">
-							<template #icon>
-								<CardComboIcon
-									:icon-name="ErrorIcon"
-									boxed
-									:box-size="50"
-									:color="style['extra4-color']"
-								/>
-							</template>
-						</CardCombo2>
-					</div>
 
-					<!-- map -->
-					<div class="flex overflow-hidden">
-						<CardExtra7
-							title="Top countries"
-							:segmented="{
-								content: true
-							}"
-						/>
-					</div>
 
 					<!-- timeline -->
 					<div class="timeline-wrap grow">
@@ -154,7 +62,7 @@
 							long
 							lazy
 							hide-image
-							title="Issues timeline"
+							title="ültimas Reservas/Estado"
 							class="h-full overflow-hidden"
 							:segmented="{
 								content: true
@@ -174,7 +82,6 @@ import { useThemeStore } from "@/stores/theme"
 import { computed } from "vue"
 
 definePageMeta({
-	alias: ["/", "/dashboard"],
 	auth: true,
 	roles: "all"
 })

@@ -10,27 +10,27 @@
 			<Logo mini :dark="isDark" class="mb-4" max-height="40px" />
 			<div class="font-display mb-4 text-4xl font-bold">{{ title }}</div>
 			<div class="text-secondary mb-12 text-lg">
-				Today is a new day. It's your day. You shape it. Sign in to start managing your projects.
+				Bienvenido a Triplotrip, gestión de venta de excursiones y viajes
 			</div>
 		</div>
 
 		<transition name="form-fade" mode="out-in" appear class="min-h-137">
 			<SignIn v-if="type === 'signin'" key="signin">
 				<template #extra-actions>
-					<n-button text type="primary" @click="gotoForgotPassword()">Forgot Password?</n-button>
+					<n-button text type="primary" @click="gotoForgotPassword()">Olvidaste tu contraseña?</n-button>
 				</template>
 				<template #bottom-area>
 					<div class="text-center">
-						Don't you have an account?
-						<n-button text type="primary" size="large" @click="gotoSignUp()">Sign up</n-button>
+						No tenés cuenta?
+						<n-button text type="primary" size="large" @click="gotoSignUp()">Registrate</n-button>
 					</div>
 				</template>
 			</SignIn>
 			<SignUp v-else-if="type === 'signup'" key="signup">
 				<template #bottom-area>
 					<div class="text-center">
-						Do you have an account?
-						<n-button text type="primary" size="large" @click="gotoSignIn()">Sign in</n-button>
+						Ya tenés cuenta?
+						<n-button text type="primary" size="large" @click="gotoSignIn()">Ingresá</n-button>
 					</div>
 				</template>
 			</SignUp>
@@ -61,7 +61,7 @@ const router = useRouter()
 const themeStore = useThemeStore()
 const isDark = computed<boolean>(() => themeStore.isThemeDark)
 const title = computed<string>(() =>
-	type.value === "signin" ? "Welcome Back" : type.value === "signup" ? "Hello" : "Forgot Password"
+	type.value === "signin" ? "Hola, nuevamente!" : type.value === "signup" ? "Hola" : "Olvidaste la contraseña?"
 )
 
 function gotoSignIn() {

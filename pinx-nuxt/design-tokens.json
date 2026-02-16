@@ -1,7 +1,7 @@
 {
 	"borderRadius": {
-		"default": "8px",
-		"small": "4px"
+		"default": "10px",
+		"small": "5px"
 	},
 	"lineHeight": {
 		"default": "1.25"
@@ -74,9 +74,9 @@
 			"textTertiary": "rgb(114, 115, 115)",
 			"border": "rgb(226, 230, 233)",
 			"hover": "rgba(221, 224, 225, 0.5)",
-			"primary": "rgb(0, 179, 122)",
+			"primary": "rgb(237, 237, 12)",
 			"info": "rgb(97, 102, 255)",
-			"success": "rgb(0, 179, 122)",
+			"success": "rgb(237, 237, 12)",
 			"warning": "rgb(255, 183, 0)",
 			"error": "rgb(255, 0, 85)",
 			"extra1": "rgb(97, 102, 255)",
@@ -94,9 +94,9 @@
 			"textTertiary": "rgb(172, 181, 190)",
 			"border": "rgb(70, 71, 79)",
 			"hover": "rgba(59, 61, 68, 0.5)",
-			"primary": "rgb(0, 224, 153)",
+			"primary": "rgb(237, 237, 12)",
 			"info": "rgb(97, 102, 255)",
-			"success": "rgb(0, 224, 153)",
+			"success": "rgb(237, 237, 12)",
 			"warning": "rgb(255, 183, 0)",
 			"error": "rgb(255, 0, 85)",
 			"extra1": "rgb(97, 102, 255)",

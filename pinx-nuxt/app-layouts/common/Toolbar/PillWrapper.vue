@@ -10,7 +10,7 @@
 	border: 1px solid var(--border-color);
 	color: var(--fg-default-color);
 	border-radius: 50px;
-	padding: 6px;
+	padding: 6px 6px 6px 12px;
 	transition: all 0.3s;
 	gap: 14px;
 }

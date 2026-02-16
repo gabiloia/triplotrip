@@ -81,7 +81,7 @@
 			"type": "color"
 		},
 		"color-light-primary": {
-			"value": "rgb(0, 179, 122)",
+			"value": "rgb(237, 237, 12)",
 			"type": "color"
 		},
 		"color-light-info": {
@@ -89,7 +89,7 @@
 			"type": "color"
 		},
 		"color-light-success": {
-			"value": "rgb(0, 179, 122)",
+			"value": "rgb(237, 237, 12)",
 			"type": "color"
 		},
 		"color-light-warning": {

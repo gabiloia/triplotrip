@@ -4,110 +4,171 @@
 			<div class="user-info flex flex-wrap">
 				<div class="propic">
 					<n-avatar :size="100" :src="propic" round :img-props="{ alt: 'avatar' }" />
-					<ImageCropper
-						v-slot="{ openCropper }"
-						placeholder="Select your profile picture"
-						@crop="setCroppedImage"
-					>
+					<ImageCropper v-slot="{ openCropper }" @crop="setCroppedImage">
 						<Icon :name="EditIcon" :size="16" class="edit" @click="openCropper()" />
 					</ImageCropper>
 				</div>
 				<div class="info flex grow flex-col justify-center">
 					<div class="name">
-						<h1>Margie Dibbert</h1>
+						<h1>{{ user?.name || 'Usuario' }}</h1>
 					</div>
 					<div class="details flex flex-wrap">
 						<div class="item">
 							<n-tooltip placement="top">
 								<template #trigger>
 									<div class="tooltip-wrap">
-										<Icon :name="RoleIcon" />
-										<span>Editor</span>
-									</div>
-								</template>
-								<span>Role</span>
-							</n-tooltip>
-						</div>
-						<div class="item">
-							<n-tooltip placement="top">
-								<template #trigger>
-									<div class="tooltip-wrap">
-										<Icon :name="LocationIcon" />
-										<span>New York No. 1 Lake Park</span>
-									</div>
-								</template>
-								<span>Location</span>
-							</n-tooltip>
-						</div>
-						<div class="item">
-							<n-tooltip placement="top">
-								<template #trigger>
-									<div class="tooltip-wrap">
 										<Icon :name="MailIcon" />
-										<span>sigmund67@gmail.com</span>
+										<span>{{ user?.email || 'Sin email' }}</span>
 									</div>
 								</template>
-								<span>Contacts</span>
+								<span>Email</span>
 							</n-tooltip>
 						</div>
 					</div>
 				</div>
 				<div class="actions">
-					<ImageCropper
-						v-slot="{ openCropper }"
-						placeholder="Select your profile picture"
-						@crop="setCroppedImage"
-					>
-						<n-button size="large" type="primary" @click="openCropper()">Edit profile image</n-button>
+					<ImageCropper v-slot="{ openCropper }" @crop="setCroppedImage">
+						<n-button size="large" type="primary" @click="openCropper()">Cambiar imagen</n-button>
 					</ImageCropper>
 				</div>
 			</div>
+
 			<div class="section-selector">
 				<n-tabs v-model:value="tabActive">
-					<n-tab name="activity">Activity</n-tab>
-					<n-tab name="settings">Settings</n-tab>
+					<n-tab name="settings">Configuración</n-tab>
+					<n-tab name="activity">Propiedades</n-tab>
 				</n-tabs>
 			</div>
 		</n-card>
+
 		<div class="main">
 			<n-tabs v-model:value="tabActive" tab-class="hidden!" animated>
-				<n-tab-pane name="activity">
-					<ProfileActivity />
-				</n-tab-pane>
 				<n-tab-pane name="settings">
 					<ProfileSettings />
 				</n-tab-pane>
+				<n-tab-pane name="activity">
+					<ProfileActivity />
+				</n-tab-pane>
 			</n-tabs>
 		</div>
+
+		<div v-if="error" style="color: red;" class="mt-4 text-center">{{ error }}</div>
 	</div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import type { ImageCropperResult } from "@/components/common/ImageCropper.vue"
+import { NAvatar, NButton, NCard, NTab, NTabPane, NTabs, NTooltip, useNotification } from "naive-ui"
+import qs from "qs"
+import { onMounted, ref } from "vue"
 import Icon from "@/components/common/Icon.vue"
 import ImageCropper from "@/components/common/ImageCropper.vue"
 import ProfileActivity from "@/components/profile/ProfileActivity.vue"
 import ProfileSettings from "@/components/profile/ProfileSettings.vue"
-import { NAvatar, NButton, NCard, NTab, NTabPane, NTabs, NTooltip } from "naive-ui"
-import { ref } from "vue"
 
-definePageMeta({
-	auth: true,
-	roles: "all"
-})
+definePageMeta({ auth: true, roles: "all" })
 
-const RoleIcon = "tabler:user"
-const LocationIcon = "tabler:map-pin"
-const EditIcon = "uil:image-edit"
 const MailIcon = "tabler:mail"
+const EditIcon = "uil:image-edit"
 
-const tabActive = ref("activity")
+const tabActive = ref("settings")
 const propic = ref("/images/avatar-200.jpg")
+const user = ref<any>(null)
+const propiedades = ref([])
+const error = ref<string | null>(null)
+const notification = useNotification()
 
-function setCroppedImage(result: ImageCropperResult) {
+async function setCroppedImage(result: ImageCropperResult) {
 	const canvas = result.canvas as HTMLCanvasElement
-	propic.value = canvas.toDataURL()
+	const dataUrl = canvas.toDataURL()
+	propic.value = dataUrl
+
+	try {
+		const token = localStorage.getItem("auth_token")
+		if (!token) throw new Error("No estás autenticado")
+
+		const blob = await (await fetch(dataUrl)).blob()
+		const formData = new FormData()
+		formData.append("files", blob, "avatar.jpg")
+
+		const uploadRes = await $fetch("https://admin.triplotrip.com/api/upload", {
+			method: "POST",
+			headers: { Authorization: `Bearer ${token}` },
+			body: formData
+		})
+
+		const uploaded = Array.isArray(uploadRes) ? uploadRes[0] : uploadRes
+		const avatarId = uploaded.id
+
+		// Traer el user ID
+		const userRes = await $fetch("https://admin.triplotrip.com/api/users/me", {
+			headers: { Authorization: `Bearer ${token}` }
+		})
+
+		await $fetch(`https://admin.triplotrip.com/api/users/${userRes.id}`, {
+			method: "PUT",
+			headers: {
+				Authorization: `Bearer ${token}`
+			},
+			body: { avatar: avatarId }
+		})
+
+		notification.success({
+			title: "Imagen actualizada",
+			content: "Tu foto de perfil fue guardada correctamente."
+		})
+
+		// Refrescar avatar desde Strapi
+		await loadUser()
+	} catch (err: any) {
+		console.error(err)
+		notification.error({
+			title: "Error al subir imagen",
+			content: err.message || "Ocurrió un error"
+		})
+	}
 }
+
+async function loadUser() {
+	try {
+		const token = localStorage.getItem("auth_token")
+		if (!token) {
+			error.value = "No estás autenticado"
+			return
+		}
+
+		const currentUser = await $fetch("https://admin.triplotrip.com/api/users/me?populate=avatar", {
+			headers: { Authorization: `Bearer ${token}` }
+		})
+
+		user.value = currentUser
+		propic.value = currentUser.avatar?.url
+			? `https://admin.triplotrip.com${currentUser.avatar.url}`
+			: "/images/avatar-200.jpg"
+
+		const query = qs.stringify({
+			filters: {
+				owner: {
+					documentId: {
+						$eq: currentUser.documentId
+					}
+				}
+			},
+			populate: ["owner"]
+		}, { encodeValuesOnly: true })
+
+		const res = await $fetch(`https://admin.triplotrip.com/api/propiedades?${query}`, {
+			headers: { Authorization: `Bearer ${token}` }
+		})
+
+		propiedades.value = res.data || []
+	} catch (e: any) {
+		error.value = `Error cargando perfil: ${e.message || e}`
+		console.error(e)
+	}
+}
+
+onMounted(loadUser)
 </script>
 
 <style lang="scss" scoped>
@@ -140,6 +201,7 @@ function setCroppedImage(result: ImageCropperResult) {
 					cursor: pointer;
 				}
 			}
+
 			.info {
 				.name {
 					margin-bottom: 12px;
@@ -176,6 +238,7 @@ function setCroppedImage(result: ImageCropperResult) {
 				}
 			}
 		}
+
 		.section-selector {
 			padding: 0px 30px;
 			padding-top: 15px;

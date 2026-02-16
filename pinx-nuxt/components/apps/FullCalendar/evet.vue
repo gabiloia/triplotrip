@@ -1,6 +1,6 @@
 <template>
-	<n-drawer :show="show" :width="400" class="fullcalendar-drawer" @update:show="val => emit('update:show', val)">
-		<n-drawer-content :title="event?.documentId ? 'Edit event' : 'Add event'" closable>
+	<n-drawer :show="show" :width="500" class="fullcalendar-drawer" @update:show="val => emit('update:show', val)">
+		<n-drawer-content :title="event?.id ? 'Edit event' : 'Add event'" closable>
 			<n-form v-if="event" ref="refForm" :label-width="80" :model="event" :rules="formRules">
 				<n-form-item label="Title" path="title">
 					<n-input v-model:value="event.title" placeholder="Event Title" />
@@ -34,12 +34,11 @@
 						label-field="label"
 						value-field="value"
 						placeholder="Seleccionar excursión"
-						clearable
 					/>
 				</n-form-item>
 
 				<div class="flex items-center justify-end gap-3">
-					<n-form-item v-if="event?.documentId">
+					<n-form-item v-if="event?.id">
 						<n-popconfirm @positive-click="deleteEvent">
 							<template #trigger>
 								<n-button>Delete Event</n-button>
@@ -48,9 +47,7 @@
 						</n-popconfirm>
 					</n-form-item>
 					<n-form-item>
-						<n-button type="primary" :loading="loading" @click="handleSubmit">
-							{{ loading ? 'Guardando...' : 'Guardar' }}
-						</n-button>
+						<n-button type="primary" @click="handleSubmit">Guardar</n-button>
 					</n-form-item>
 				</div>
 			</n-form>
@@ -90,7 +87,6 @@ const { event, show } = toRefs(props)
 const refForm = ref()
 const message = useMessage()
 const excursionOptions = ref([])
-const loading = ref(false)
 
 onMounted(async () => {
   const token = localStorage.getItem('auth_token')
@@ -112,47 +108,29 @@ onMounted(async () => {
 watch(
   event,
   (val) => {
-    console.log('EventEditor recibió evento:', val)
     if (!val) return
-
-    // Convierte start y end a Date si vienen como timestamp
-    if (val.start && typeof val.start === 'number') val.start = new Date(val.start)
-    if (val.end && typeof val.end === 'number') val.end = new Date(val.end)
     // Convierte start y end a Date si vienen como string
     if (val.start && typeof val.start === 'string') val.start = new Date(val.start)
     if (val.end && typeof val.end === 'string') val.end = new Date(val.end)
-
-    // Setea excursionId basado en la excursión existente
-    if (val.excursion && val.excursion.documentId) {
+    // Setea excursionId
+    if (val.excursion) {
       val.excursionId = val.excursion.documentId
     } else {
       val.excursionId = null
     }
-
-    console.log('Evento procesado para edición:', {
-      documentId: val.documentId,
-      title: val.title,
-      excursionId: val.excursionId,
-      start: val.start,
-      end: val.end
-    })
   },
   { immediate: true }
 )
 
 const formRules = {
-	title: {
-		required: true,
-		message: "Please input event title",
-		trigger: "blur"
-	}
+  title: { required: true, message: 'Por favor ingresá un título', trigger: 'blur' },
+  start: { required: true, message: 'Fecha inicio requerida', trigger: 'blur' },
+  end: { required: true, message: 'Fecha fin requerida', trigger: 'blur' }
 }
 
 async function handleSubmit() {
+  await refForm.value?.validate()
   try {
-    await refForm.value?.validate()
-    loading.value = true
-
     const token = localStorage.getItem('auth_token')
     if (!token) throw new Error('No token')
 
@@ -170,56 +148,30 @@ async function handleSubmit() {
         user: { connect: [{ documentId: user.documentId }] },
         excursion: event.value.excursionId
           ? { connect: [{ documentId: event.value.excursionId }] }
-          : { disconnect: true }
+          : null
       }
     }
 
-    // VERIFICAR SI EL EVENTO YA EXISTE EN LA BASE DE DATOS
-    let eventoExiste = false
-    if (event.value.documentId) {
-      try {
-        // Intentar obtener el evento de la base de datos
-        const eventoExistente = await $fetch(`https://admin.triplotrip.com/api/events/${event.value.documentId}`, {
-          headers: { Authorization: `Bearer ${token}` }
-        })
-        eventoExiste = !!eventoExistente.data
-        console.log('Evento existe en BD:', eventoExiste, eventoExistente.data)
-      } catch (error) {
-        console.log('Evento no encontrado en BD, será creado como nuevo')
-        eventoExiste = false
-      }
-    }
-
-    if (eventoExiste && event.value.documentId) {
-      console.log('EDITANDO evento existente:', event.value.documentId, payload)
-
-      await $fetch(`https://admin.triplotrip.com/api/events/${event.value.documentId}`, {
+    if (event.value.id) {
+      await $fetch(`https://admin.triplotrip.com/api/events/${event.value.id}`, {
         method: 'PUT',
         body: payload,
         headers: { Authorization: `Bearer ${token}` }
       })
-
-      message.success('Evento actualizado con éxito')
     } else {
-      console.log('CREANDO nuevo evento', payload)
-
-      const nuevoEvento = await $fetch('https://admin.triplotrip.com/api/events', {
+      await $fetch('https://admin.triplotrip.com/api/events', {
         method: 'POST',
         body: payload,
         headers: { Authorization: `Bearer ${token}` }
       })
-
-      console.log('Nuevo evento creado:', nuevoEvento)
-      message.success('Evento creado con éxito')
     }
 
+    message.success('Evento guardado con éxito')
     emit('submitEvent')
     emit('update:show', false)
   } catch (error) {
     console.error('Error guardando evento:', error)
-    message.error(`Error al guardar el evento: ${error.message || 'Error desconocido'}`)
-  } finally {
-    loading.value = false
+    message.error('Error al guardar el evento')
   }
 }
 

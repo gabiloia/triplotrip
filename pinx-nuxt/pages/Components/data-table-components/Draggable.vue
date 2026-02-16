@@ -1,6 +1,6 @@
 <template>
 	<CardCodeExample title="Column draggable">
-		<template #description>Only support leaf nodews</template>
+		<template #description>Only support leaf nodes</template>
 
 		<n-data-table :columns :data :pagination :bordered="false" />
 		<template #code="{ html, js }">

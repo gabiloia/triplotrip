@@ -5,35 +5,16 @@ import { RouterLink } from "vue-router"
 const DashboardIcon = "carbon:dashboard"
 
 export default {
-	label: "Panel",
-	key: "Dashboard",
+	key: "Dashboard-Analytics",
 	icon: renderIcon(DashboardIcon),
-	children: [
+	label: () =>
+	h(
+		RouterLink,
 		{
-			label: () =>
-				h(
-					RouterLink,
-					{
-						to: {
-							name: "Dashboard-Analytics"
-						}
-					},
-					{ default: () => "Analíticas" }
-				),
-			key: "Dashboard-Analytics"
+			to: {
+				name: "Dashboard-Analytics"
+			}
 		},
-		{
-			label: () =>
-				h(
-					RouterLink,
-					{
-						to: {
-							name: "Dashboard-eCommerce"
-						}
-					},
-					{ default: () => "Ventas" }
-				),
-			key: "Dashboard-eCommerce"
-		}
-	]
+		{ default: () => "Analíticas" }
+	)
 }

@@ -1,13 +1,6 @@
 import dayjs from "@/utils/dayjs"
 import { faker } from "@faker-js/faker"
 
-export async function fetchEvents() {
-	const { data } = await useFetch('http://localhost:1337/api/events')
-	return data
-}
-
-console.warn("fetchEvents", fetchEvents)
-
 export interface CalendarEvent {
 	id?: string
 	title: string
@@ -47,7 +40,7 @@ export const availableCalendars = [
 export function getEvents(): CalendarEvent[] {
 	const events = []
 
-	for (let i = 0; i < 6; i++) {
+	for (let i = 0; i < 30; i++) {
 		const allDay = faker.datatype.boolean()
 		const start = faker.date.between({
 			from: dayjs().subtract(1, "month").toDate(),

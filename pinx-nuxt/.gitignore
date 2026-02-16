@@ -35,6 +35,7 @@ unplugin.components.d.ts
 .nuxt
 .nitro
 .cache
+.output
 .env
 .env.production
 .fleet

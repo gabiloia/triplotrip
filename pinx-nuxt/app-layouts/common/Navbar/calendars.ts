@@ -12,7 +12,7 @@ export default {
 			RouterLink,
 			{
 				to: {
-					name: "Calendar"
+					name: "Apps-Calendars-FullCalendar"
 				}
 			},
 			{ default: () => "Calendario" }

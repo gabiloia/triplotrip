@@ -252,7 +252,7 @@ const footerShown = computed({
 })
 
 const palette = ref<Palette>([
-	{ light: "#00B27B", dark: "#00E19B" },
+	{ light: "#E1E100", dark: "#00E19B" },
 	{ light: "#6267FF", dark: "#6267FF" },
 	{ light: "#FF61C9", dark: "#FF61C9" },
 	{ light: "#FFB600", dark: "#FFB600" },
@@ -266,7 +266,7 @@ function setPrimary(color: ColorPalette) {
 
 function reset() {
 	themeStore.setColor(ThemeNameEnum.Dark, "primary", "#00E19B")
-	themeStore.setColor(ThemeNameEnum.Light, "primary", "#00B27B")
+	themeStore.setColor(ThemeNameEnum.Light, "primary", "#E1E100")
 	themeStore.setTheme(useOsTheme().value === "dark" ? ThemeNameEnum.Dark : ThemeNameEnum.Light)
 	themeStore.setLayout(Layout.VerticalNav)
 	themeStore.setRouterTransition(RouterTransition.FadeUp)

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<n-form ref="formRef" :model :rules>
+		<n-form ref="formRef" :model="model" :rules="rules">
 			<n-form-item path="email" label="Email" first>
 				<n-input
 					v-model:value="model.email"
@@ -23,7 +23,7 @@
 			</n-form-item>
 			<div class="flex flex-col items-end gap-6">
 				<div class="flex w-full justify-between">
-					<n-checkbox size="large">Remember me</n-checkbox>
+					<n-checkbox size="large">Recordame</n-checkbox>
 					<slot name="extra-actions" />
 				</div>
 				<div class="w-full">
@@ -41,7 +41,7 @@
 				<template #icon>
 					<img alt="google-icon" class="block h-5" src="@/assets/images/google-icon.svg?url" />
 				</template>
-				<span class="px-2">Sign in with Google</span>
+				<span class="px-2">Ingresá con Google</span>
 			</n-button>
 		</div>
 
@@ -51,11 +51,11 @@
 
 <script lang="ts" setup>
 import type { FormInst, FormItemRule, FormRules, FormValidationError } from "naive-ui"
-import { useAuthStore } from "@/stores/auth"
 import { NButton, NCheckbox, NDivider, NForm, NFormItem, NInput, useMessage } from "naive-ui"
 import isEmail from "validator/es/lib/isEmail"
 import { computed, ref, watch } from "vue"
 import { useRouter } from "vue-router"
+import { useAuthStore } from "@/stores/auth"
 
 interface ModelType {
 	email: string | null
@@ -65,60 +65,59 @@ interface ModelType {
 const router = useRouter()
 const formRef = ref<FormInst | null>(null)
 const message = useMessage()
+const authStore = useAuthStore()
+
 const model = ref<ModelType>({
-	email: "admin@admin.com",
-	password: "password"
+	email: "",
+	password: ""
 })
 
 const rules: FormRules = {
 	email: [
+		{ required: true, trigger: ["blur"], message: "Email es un campo requerido" },
 		{
-			required: true,
-			trigger: ["blur"],
-			message: "Email is required"
-		},
-		{
-			validator: (rule: FormItemRule, value: string): boolean => {
-				return isEmail(value || "")
-			},
-			message: "The email is not formatted correctly",
+			validator: (rule: FormItemRule, value: string): boolean => isEmail(value || ""),
+			message: "Invalid email format",
 			trigger: ["blur"]
 		}
 	],
-	password: [
-		{
-			required: true,
-			trigger: ["blur"],
-			message: "Password is required"
-		}
-	]
+	password: [{ required: true, trigger: ["blur"], message: "Password es un campo requerido" }]
 }
 
 const isValid = computed(() => {
-	return model.value.password && isEmail(model.value.email || "")
+	return !!model.value.password && isEmail(model.value.email || "")
 })
 
-const authStore = useAuthStore()
-
-function signIn(e: Event) {
+async function signIn(e: Event) {
 	e.preventDefault()
-	formRef.value?.validate((errors: Array<FormValidationError> | undefined) => {
+	formRef.value?.validate(async errors => {
 		if (!errors) {
-			if (model.value.email === "admin@admin.com" && model.value.password === "password") {
-				authStore.setLogged()
-				router.push({ path: "/", replace: true })
-			} else {
-				message.error("Invalid credentials")
+			try {
+				const res = await $fetch("https://admin.triplotrip.com/api/auth/local", {
+					method: "POST",
+					body: {
+						identifier: model.value.email,
+						password: model.value.password
+					}
+				})
+
+				if (res.jwt && res.user) {
+					localStorage.setItem("auth_token", res.jwt)
+					authStore.setLogged(res.user)
+					message.success("Login exitoso")
+					router.push({ path: "/" })
+				}
+			} catch (err: any) {
+				console.error("Login error:", err)
+				message.error("Credenciales inválidas")
 			}
 		} else {
-			message.error("Invalid credentials")
+			message.error("Datos incompletos o inválidos")
 		}
 	})
 }
 
 watch(isValid, val => {
-	if (val) {
-		formRef.value?.validate()
-	}
+	if (val) formRef.value?.validate()
 })
 </script>

@@ -8,12 +8,9 @@
 
 			<ClientOnly>
 				<Breadcrumb class="grow" />
-				<PinnedPages />
 			</ClientOnly>
 
 			<PillWrapper>
-				<Search />
-				<LocaleSwitch />
 				<FullscreenSwitch />
 				<ThemeSwitch />
 				<Notifications />
@@ -35,11 +32,8 @@ import Avatar from "./Avatar.vue"
 import BlurEffect from "./BlurEffect.vue"
 import Breadcrumb from "./Breadcrumb.vue"
 import FullscreenSwitch from "./FullscreenSwitch.vue"
-import LocaleSwitch from "./LocaleSwitch.vue"
 import Notifications from "./Notifications.vue"
 import PillWrapper from "./PillWrapper.vue"
-import PinnedPages from "./PinnedPagesV2.vue"
-import Search from "./Search.vue"
 import ThemeSwitch from "./ThemeSwitch.vue"
 
 const { boxed, gradient } = defineProps<{

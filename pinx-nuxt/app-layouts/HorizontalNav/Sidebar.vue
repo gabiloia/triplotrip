@@ -13,9 +13,6 @@
 					<Navbar :collapsed="sidebarClosed" />
 				</div>
 			</n-scrollbar>
-			<div class="p-2">
-				<SidebarFooter :collapsed="sidebarClosed" />
-			</div>
 		</div>
 	</aside>
 </template>
@@ -28,7 +25,6 @@ import { toggleSidebarClass } from "@/utils/theme"
 import { onClickOutside, useElementHover } from "@vueuse/core"
 import { NScrollbar } from "naive-ui"
 import { computed, onMounted, ref, watch } from "vue"
-import SidebarFooter from "./SidebarFooter.vue"
 import SidebarHeader from "./SidebarHeader.vue"
 
 const themeStore = useThemeStore()

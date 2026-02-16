@@ -16,7 +16,6 @@
 import type { Align } from "@/components/auth/Settings.vue"
 import type { FormType } from "@/components/auth/types.d"
 import AuthForm from "@/components/auth/AuthForm.vue"
-import Settings from "@/components/auth/Settings.vue"
 import { useAuthStore } from "@/stores/auth"
 import { Layout } from "@/types/theme.d"
 import { computed, onBeforeMount, ref } from "vue"
@@ -36,7 +35,7 @@ definePageMeta({
 })
 
 const route = useRoute()
-const align = ref<Align>("left")
+const align = ref<Align>("center")
 const activeColor = ref("")
 const type = ref<FormType | undefined>(formType || undefined)
 const authStore = useAuthStore()

@@ -20,7 +20,7 @@
 					/>
 				</div>
 				<div class="section fullcalendar-actions-box">
-					<p class="mb-3 opacity-50">Calendarios</p>
+					<p class="mb-3 opacity-50">Calendars</p>
 					<div class="calendars-list">
 						<n-checkbox v-model:checked="checkAll" label="View all" />
 						<n-checkbox-group v-model:value="fullCalendarStore.selectedCalendars" class="flex flex-col">
@@ -59,7 +59,7 @@
 									<Icon :name="NextIcon" :size="20" />
 								</template>
 							</n-button>
-							<n-button v-if="!compactMode" @click="goToday()">Hoy</n-button>
+							<n-button v-if="!compactMode" @click="goToday()">Today</n-button>
 						</n-button-group>
 					</div>
 					<div class="current-date grow px-3 text-right" :class="{ compact: compactMode }">
@@ -74,6 +74,7 @@
 					</div>
 				</div>
 			</template>
+
 			<template #main-content>
 				<div ref="calWrap" class="main scrollbar-styled h-full">
 					<FullCalendar v-if="ready" ref="refCalendar" :options="calendarOptions" />
@@ -92,34 +93,33 @@
 </template>
 
 <script setup lang="ts">
-import type { CtxSegmentedPage } from "@/components/common/SegmentedPage.vue"
-import type { CalendarEditEvent, CalendarEvent } from "@/mock/fullcalendar"
 import type { CalendarApi, CalendarOptions, EventInput } from "@fullcalendar/core"
 import type { DateMarker, EventImpl } from "@fullcalendar/core/internal"
-import EventEditor from "@/components/apps/FullCalendar/EventEditor.vue"
-import Icon from "@/components/common/Icon.vue"
-import SegmentedPage from "@/components/common/SegmentedPage.vue"
-import { useHideLayoutFooter } from "@/composables/useHideLayoutFooter"
-import { useFullCalendarStore } from "@/stores/apps/useFullCalendarStore"
-import { useThemeStore } from "@/stores/theme"
+import type { CtxSegmentedPage } from "@/components/common/SegmentedPage.vue"
+import type { CalendarEditEvent, CalendarEvent } from "@/mock/fullcalendar"
 import dayGridPlugin from "@fullcalendar/daygrid"
 import interactionPlugin from "@fullcalendar/interaction"
 import listPlugin from "@fullcalendar/list"
 import timeGridPlugin from "@fullcalendar/timegrid"
 import FullCalendar from "@fullcalendar/vue3"
 import { useResizeObserver } from "@vueuse/core"
-import { NButton, NButtonGroup, NCheckbox, NCheckboxGroup, NSelect, NSpin } from "naive-ui"
+import { NButton, NButtonGroup, NCheckbox, NCheckboxGroup, NSelect, NSpin, useMessage } from "naive-ui"
 import { DatePicker } from "v-calendar"
 import { computed, nextTick, onMounted, ref, watch } from "vue"
+import EventEditor from "@/components/apps/FullCalendar/EventEditor.vue"
+import Icon from "@/components/common/Icon.vue"
+import SegmentedPage from "@/components/common/SegmentedPage.vue"
+import { useHideLayoutFooter } from "@/composables/useHideLayoutFooter"
+import { useFullCalendarStore } from "@/stores/apps/useFullCalendarStore"
+import { useThemeStore } from "@/stores/theme"
 import "v-calendar/style.css"
 import "@/assets/scss/overrides/vcalendar-override.scss"
 
 type ViewType = "timeGridDay" | "dayGridMonth" | "timeGridWeek" | "listMonth"
 
 definePageMeta({
-	alias: ["/apps", "/apps/calendars"],
-	auth: true,
-	roles: "all"
+  alias: ["/apps", "/apps/calendars"],
+  auth: true
 })
 
 const NextIcon = "carbon:chevron-right"
@@ -128,17 +128,13 @@ const AddEventIcon = "carbon:calendar-add"
 
 const fullCalendarStore = useFullCalendarStore()
 const themeStore = useThemeStore()
+const message = useMessage()
 
 const newEvent: CalendarEditEvent = {
-	title: "",
-	start: new Date().getTime(),
-	end: new Date().getTime(),
-	allDay: false,
-	extendedProps: {
-		calendar: "Personal",
-		location: "",
-		description: ""
-	}
+  title: "",
+  start: new Date().getTime(),
+  end: new Date().getTime(),
+  allDay: false
 }
 
 const ready = ref(false)
@@ -153,248 +149,318 @@ const selectedDate = ref(new Date())
 const currentViewType = ref<ViewType | undefined>(undefined)
 const currentDate = ref<string | undefined>(undefined)
 const viewTypeModel = computed({
-	get: () => currentViewType.value,
-	set: val => calView(val as ViewType)
+  get: () => currentViewType.value,
+  set: val => calView(val as ViewType)
 })
 
 const viewTypeOptions = [
-	{ value: "timeGridDay", label: "Day" },
-	{ value: "timeGridWeek", label: "Week" },
-	{ value: "listMonth", label: "List" },
-	{ value: "dayGridMonth", label: "Month" }
+  { value: "timeGridDay", label: "Day" },
+  { value: "timeGridWeek", label: "Week" },
+  { value: "listMonth", label: "List" },
+  { value: "dayGridMonth", label: "Month" }
 ]
 
 onMounted(() => {
-	nextTick(() => {
-		const duration = 1000 * themeStore.routerTransitionDuration
-		const gap = 500
+  nextTick(() => {
+    const duration = 1000 * themeStore.routerTransitionDuration
+    const gap = 500
 
-		// TIMEOUT REQUIRED BY PAGE ANIMATION
-		setTimeout(() => {
-			ready.value = true
-			nextTick(() => {
-				calendarApi.value = refCalendar.value?.getApi()
-				setCurrentState()
-			})
-		}, duration + gap)
-	})
+    setTimeout(() => {
+      ready.value = true
+      nextTick(() => {
+        calendarApi.value = refCalendar.value?.getApi()
+        setCurrentState()
+      })
+    }, duration + gap)
+  })
 })
 
 useResizeObserver(calWrap, entries => {
-	const entry = entries[0]
-	const { width } = entry.contentRect
+  const entry = entries[0]
+  const { width } = entry.contentRect
 
-	compactMode.value = width < 600
-	calendarApi.value?.updateSize()
+  compactMode.value = width < 600
+  calendarApi.value?.updateSize()
 })
 
 function setCtx(ctx: CtxSegmentedPage) {
-	ctxPage.value = ctx
+  ctxPage.value = ctx
 }
 
 function setCurrentState() {
-	currentViewType.value = calendarApi.value?.view.type as ViewType
-	currentDate.value = calendarApi.value?.view.title
+  currentViewType.value = calendarApi.value?.view.type as ViewType
+  currentDate.value = calendarApi.value?.view.title
 }
 
 function eventSanitizer(event: EventImpl): CalendarEvent {
-	const {
-		publicId,
-		title,
-		extendedProps: { calendar, location, description },
-		allDay
-	} = event._def
+  const { documentId, title, allDay } = event._def
+  const start = event._instance?.range.start || new Date()
+  const end = event._instance?.range.end || new Date()
 
-	const start = event._instance?.range.start || new Date()
-	const end = event._instance?.range.end || new Date()
+  const excursion = event._def.extendedProps?.excursion || null
+  const user = event._def.extendedProps?.user || null
 
-	return {
-		id: publicId,
-		title,
-		start,
-		end,
-		extendedProps: {
-			calendar,
-			location,
-			description
-		},
-		allDay
-	}
+  return {
+    documentId,
+    title,
+    start,
+    end,
+    allDay,
+    excursion,
+    user
+  }
 }
 
 function eventToEdit(event: EventImpl): CalendarEditEvent {
-	const {
-		publicId,
-		title,
-		extendedProps: { calendar, location, description },
-		allDay
-	} = event._def
+  const { documentId, title, allDay } = event._def
+  const start = event._instance?.range.start.getTime() || new Date().getTime()
+  const end = event._instance?.range.end.getTime() || new Date().getTime()
 
-	const start = event._instance?.range.start.getTime() || new Date().getTime()
-	const end = event._instance?.range.end.getTime() || new Date().getTime()
+  const excursion = event._def.extendedProps?.excursion || null
+  const user = event._def.extendedProps?.user || null
 
-	return {
-		id: publicId,
-		title,
-		start,
-		end,
-		extendedProps: {
-			calendar,
-			location,
-			description
-		},
-		allDay
-	}
+  console.log('Convirtiendo evento para editar:', {
+    documentId,
+    title,
+    allDay,
+    excursion,
+    user,
+    eventId: event.id,
+    eventExtendedProps: event._def.extendedProps
+  })
+
+  return {
+    documentId: documentId || event._def.extendedProps?.documentId, // Asegurar que tenemos el documentId
+    title,
+    start,
+    end,
+    allDay,
+    excursion,
+    user
+  }
 }
 
 const checkAll = computed({
-	get: () => fullCalendarStore.selectedCalendars.length === fullCalendarStore.availableCalendars.length,
-	set: val => {
-		if (val) {
-			fullCalendarStore.selectedCalendars = fullCalendarStore.availableCalendars.map(
-				(i: { label: string }) => i.label
-			)
-		} else if (fullCalendarStore.selectedCalendars.length === fullCalendarStore.availableCalendars.length) {
-			fullCalendarStore.selectedCalendars = []
-		}
-	}
+  get: () => fullCalendarStore.selectedCalendars.length === fullCalendarStore.availableCalendars.length,
+  set: val => {
+    if (val) {
+      fullCalendarStore.selectedCalendars = fullCalendarStore.availableCalendars.map(
+        (i: { label: string }) => i.label
+      )
+    } else if (fullCalendarStore.selectedCalendars.length === fullCalendarStore.availableCalendars.length) {
+      fullCalendarStore.selectedCalendars = []
+    }
+  }
 })
 
 const isThemeDark = computed(() => themeStore.isThemeDark)
 
 const modalShow = computed({
-	get: () => currentEvent.value !== null,
-	set: () => (currentEvent.value = null)
+  get: () => currentEvent.value !== null,
+  set: () => (currentEvent.value = null)
 })
 
 function calMove(direction: "next" | "prev" | "today") {
-	if (direction === "next") {
-		calendarApi.value?.next()
-	}
-	if (direction === "prev") {
-		calendarApi.value?.prev()
-	}
-	if (direction === "today") {
-		calendarApi.value?.today()
-	}
+  if (direction === "next") {
+    calendarApi.value?.next()
+  }
+  if (direction === "prev") {
+    calendarApi.value?.prev()
+  }
+  if (direction === "today") {
+    calendarApi.value?.today()
+  }
 }
 
 function calView(type: ViewType) {
-	calendarApi.value?.changeView(type)
+  calendarApi.value?.changeView(type)
 }
 
-function submitEvent() {
-	if (currentEvent.value) {
-		if (currentEvent.value.id) {
-			fullCalendarStore.updateEvent(currentEvent.value)
-		} else {
-			fullCalendarStore.addEvent(currentEvent.value)
-		}
-		currentEvent.value = null
-		refetchEvents()
-	}
+// FUNCIÓN CORREGIDA: Solo refrescar eventos del servidor
+async function submitEvent() {
+  if (currentEvent.value) {
+    // No manipular el store local, solo refrescar desde el servidor
+    currentEvent.value = null
+    await refetchEvents()
+  }
 }
 
-function deleteEvent() {
-	if (currentEvent.value) {
-		if (currentEvent.value.id) {
-			fullCalendarStore.removeEvent(currentEvent.value.id)
-		}
-		currentEvent.value = null
-		refetchEvents()
-	}
+// FUNCIÓN CORREGIDA: Eliminar solo del servidor
+async function deleteEvent() {
+  if (currentEvent.value && currentEvent.value.documentId) {
+    try {
+      const token = localStorage.getItem("auth_token")
+      if (!token) throw new Error("No autenticado")
+
+      await $fetch(`https://admin.triplotrip.com/api/events/${currentEvent.value.documentId}`, {
+        method: 'DELETE',
+        headers: { Authorization: `Bearer ${token}` }
+      })
+
+      message.success('Evento eliminado correctamente')
+      currentEvent.value = null
+      await refetchEvents()
+    } catch (error) {
+      console.error('Error eliminando evento:', error)
+      message.error('Error al eliminar el evento')
+    }
+  }
 }
 
 function createNewEvent({ start, end }: { start?: number; end?: number }) {
-	currentEvent.value = {
-		...structuredClone(newEvent),
-		start: start || new Date().getTime(),
-		end: end || new Date().getTime(),
-		allDay: true
-	}
+  currentEvent.value = {
+    ...structuredClone(newEvent),
+    start: start || new Date().getTime(),
+    end: end || new Date().getTime(),
+    allDay: true
+  }
 }
 
 function refetchEvents() {
-	calendarApi.value?.refetchEvents()
+  return new Promise((resolve) => {
+    calendarApi.value?.refetchEvents()
+    // Dar un pequeño delay para que se complete la recarga
+    setTimeout(resolve, 500)
+  })
 }
 
 function goToday() {
-	goToDate(new Date(), false)
+  goToDate(new Date(), false)
 }
 
 function goToDate(date: Date, newEvent: boolean) {
-	ctxPage.value?.closeSidebar?.()
-	calendarApi.value?.gotoDate(date)
-	if (newEvent) {
-		createNewEvent({ start: date.getTime(), end: date.getTime() })
-	}
+  ctxPage.value?.closeSidebar?.()
+  calendarApi.value?.gotoDate(date)
+  if (newEvent) {
+    createNewEvent({ start: date.getTime(), end: date.getTime() })
+  }
 }
 
 const calendarOptions: CalendarOptions = {
-	plugins: [dayGridPlugin, interactionPlugin, timeGridPlugin, listPlugin],
-	initialView: "dayGridMonth",
-	headerToolbar: /* false */ {
-		start: "drawerToggler actionsToggler today",
-		center: "prev,title,next",
-		end: "dayGridMonth,timeGridWeek,timeGridDay,listMonth"
-	},
-	firstDay: 1,
-	forceEventDuration: true,
-	editable: true,
-	eventResizableFromStart: true,
-	dragScroll: true,
-	dayMaxEvents: 2,
-	navLinks: true,
-	events: (info, successCallback) => {
-		if (!info) return
-		const events: EventInput[] = fullCalendarStore.fetchEvents()
-		successCallback(events)
-	},
-	eventClassNames({ event }) {
-		return [`c-${event._def.extendedProps.calendar} styled`]
-	},
-	eventClick({ event }) {
-		currentEvent.value = eventToEdit(event)
-	},
-	dateClick(info) {
-		createNewEvent({ start: info.date.getTime(), end: info.date.getTime() })
-	},
-	eventDrop: ({ event }) => {
-		if (event._instance) {
-			event._instance.range.start = event.start as DateMarker
-			event._instance.range.end = event.end as DateMarker
-		}
-		const updated = eventSanitizer(event)
-		fullCalendarStore.updateEvent(updated)
-		refetchEvents()
-	},
-	datesSet() {
-		setCurrentState()
-	}
-	/*
-	customButtons: {
-		drawerToggler: {
-			text: "",
-			click() {
-				createNewEvent({})
-			}
-		},
-		actionsToggler: {
-			text: "Actions",
-			click() {
-				showLabelsModal.value = !showLabelsModal.value
-			}
-		}
-	}
-	*/
+  plugins: [dayGridPlugin, interactionPlugin, timeGridPlugin, listPlugin],
+  initialView: "dayGridMonth",
+  headerToolbar: {
+    start: "drawerToggler actionsToggler today",
+    center: "prev,title,next",
+    end: "dayGridMonth,timeGridWeek,timeGridDay,listMonth"
+  },
+  firstDay: 1,
+  forceEventDuration: true,
+  editable: true,
+  eventResizableFromStart: true,
+  dragScroll: true,
+  dayMaxEvents: 2,
+  navLinks: true,
+  events: async (info, successCallback) => {
+    try {
+      const token = localStorage.getItem("auth_token")
+      if (!token) throw new Error("No autenticado")
+
+      const user = await $fetch("https://admin.triplotrip.com/api/users/me", {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+
+      const res = await $fetch(`https://admin.triplotrip.com/api/events?filters[user][documentId][$eq]=${user.documentId}&populate=excursion`, {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+
+      const events: EventInput[] = (res.data || []).map((evt: any) => ({
+        id: evt.documentId, // ID único para FullCalendar
+        documentId: evt.documentId, // Mantener documentId en extendedProps
+        title: evt.Title || "",
+        start: evt.Start,
+        end: evt.End,
+        allDay: !!evt.AllDay,
+        extendedProps: {
+          documentId: evt.documentId, // Asegurar que está en extendedProps también
+          excursion: evt.excursion || null,
+          user: evt.user || null
+        }
+      }))
+
+      console.log('Eventos cargados desde Strapi:', events)
+      successCallback(events)
+    } catch (error) {
+      console.error("Error al cargar eventos desde Strapi:", error)
+      successCallback([])
+    }
+  },
+  eventClassNames({ event }) {
+    return ["styled"]
+  },
+  eventClick({ event }) {
+    console.log('Click en evento:', {
+      id: event.id,
+      documentId: event.extendedProps?.documentId,
+      title: event.title,
+      _def: event._def
+    })
+    currentEvent.value = eventToEdit(event)
+    console.log('Evento preparado para editar:', currentEvent.value)
+  },
+  dateClick(info) {
+    createNewEvent({ start: info.date.getTime(), end: info.date.getTime() })
+  },
+  // FUNCIÓN CORREGIDA: Actualizar directamente en Strapi cuando se arrastra un evento
+  eventDrop: async ({ event, revert }) => {
+    try {
+      const token = localStorage.getItem("auth_token")
+      if (!token) throw new Error("No autenticado")
+
+      const payload = {
+        data: {
+          Start: event.start?.toISOString(),
+          End: event.end?.toISOString()
+        }
+      }
+
+      await $fetch(`https://admin.triplotrip.com/api/events/${event.extendedProps.documentId}`, {
+        method: 'PUT',
+        body: payload,
+        headers: { Authorization: `Bearer ${token}` }
+      })
+
+      message.success('Evento actualizado')
+    } catch (error) {
+      console.error('Error actualizando evento:', error)
+      message.error('Error al actualizar el evento')
+      revert() // Revertir el cambio si hay error
+    }
+  },
+  // FUNCIÓN CORREGIDA: Actualizar directamente en Strapi cuando se redimensiona un evento
+  eventResize: async ({ event, revert }) => {
+    try {
+      const token = localStorage.getItem("auth_token")
+      if (!token) throw new Error("No autenticado")
+
+      const payload = {
+        data: {
+          Start: event.start?.toISOString(),
+          End: event.end?.toISOString()
+        }
+      }
+
+      await $fetch(`https://admin.triplotrip.com/api/events/${event.extendedProps.documentId}`, {
+        method: 'PUT',
+        body: payload,
+        headers: { Authorization: `Bearer ${token}` }
+      })
+
+      message.success('Evento actualizado')
+    } catch (error) {
+      console.error('Error actualizando evento:', error)
+      message.error('Error al actualizar el evento')
+      revert() // Revertir el cambio si hay error
+    }
+  },
+  datesSet() {
+    setCurrentState()
+  }
 }
 
 watch(() => fullCalendarStore.selectedCalendars, refetchEvents)
 watch(selectedDate, val => goToDate(val, false))
 
-// :has() CSS relational pseudo-class not yet supported by Firefox
-// (https://caniuse.com/css-has)
-// at the moment this worker around permit to hide Layout Footer
 useHideLayoutFooter()
 </script>
 

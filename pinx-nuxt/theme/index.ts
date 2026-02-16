@@ -50,7 +50,7 @@ export function getDefaultState() {
 				}
 			}
 		},
-		toolbarHeight: 100, // Default toolbar height (in pixels)
+		toolbarHeight: 80, // Default toolbar height (in pixels)
 		viewPadding: 40, // Default view padding (in pixels)
 		headerBarHeight: 60, // Height of the header bar (in pixels)
 		colors: tokens.colors, // Color definitions from the token

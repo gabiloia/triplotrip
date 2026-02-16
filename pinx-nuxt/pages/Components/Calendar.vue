@@ -1,7 +1,7 @@
 <template>
 	<div class="page">
 		<div class="page-header">
-			<div class="title">Calendar</div>
+			<div class="title">Calendario</div>
 			<div class="links">
 				<a
 					href="https://www.naiveui.com/en-US/light/components/calendar"
@@ -17,18 +17,18 @@
 
 		<div class="components-list">
 			<CardCodeExample title="Basic">
-				<n-calendar #="{ month, date, year }" @update:value="handleUpdateValue">
-					{{ month }}-{{ date }}-{{ year }}
+				<n-calendar #="{ year, month, date }" @update:value="handleUpdateValue">
+					{{ year }}-{{ month }}-{{ date }}
 				</n-calendar>
 				<template #code="{ html, js }">
 					{{ html(`
 					<n-calendar
 						v-model:value="value"
-						#="{ month, date, year }"
+						#="{ year, month, date }"
 						:is-date-disabled="isDateDisabled"
 						@update:value="handleUpdateValue"
 					>
-						\{\{ month \}\}-\{\{ date \}\}-\{\{ year \}\}
+						\{\{ year \}\}-\{\{ month \}\}-\{\{ date \}\}
 					</n-calendar>
 					`) }}
 
@@ -36,8 +36,8 @@
 						js(`
 						const message = useMessage()
 
-						function handleUpdateValue(_: number, {  month, date, year }: { month: number; date: number; year: number }) {
-							message.success(\`\$\{month}-\$\{date}-\$\{year}\`)
+						function handleUpdateValue(_: number, { year, month, date }: { year: number; month: number; date: number }) {
+							message.success(\`\$\{year}-\$\{month}-\$\{date}\`)
 						}
 						`)
 					}}
@@ -55,7 +55,7 @@ const ExternalIcon = "tabler:external-link"
 
 const message = useMessage()
 
-function handleUpdateValue(_: number, { month, date, year }: { month: number; date: number; year: number }) {
-	message.success(`${month}-${date}-${year}`)
+function handleUpdateValue(_: number, { year, month, date }: { year: number; month: number; date: number }) {
+	message.success(`${year}-${month}-${date}`)
 }
 </script>

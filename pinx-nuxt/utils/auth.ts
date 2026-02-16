@@ -8,7 +8,7 @@ export function authCheck(route: RouteLocationNormalized): string | null {
 		const authStore = useAuthStore()
 
 		if (auth && (!authStore.isLogged || (roles && !authStore.isRoleGranted(roles)))) {
-			return "/login"
+			return "/auth/login" // Cambié de "/login" a "/auth/login"
 		}
 
 		if (checkAuth && authStore.isLogged && (!roles || authStore.isRoleGranted(roles))) {
@@ -16,7 +16,6 @@ export function authCheck(route: RouteLocationNormalized): string | null {
 		}
 
 		return null
-		// eslint-disable-next-line unused-imports/no-unused-vars
 	} catch (err) {
 		return null
 	}
